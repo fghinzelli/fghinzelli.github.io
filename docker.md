@@ -61,3 +61,15 @@
 `hostname -i` - mostra o ip atribuído ao container pelo docker (funciona apenas dentro do container). 
 
 `docker network create --driver bridge NOME_DA_REDE` - cria uma rede especificando o driver desejado.
+
+## Docker file  
+~~~~
+FROM node:latest  
+MAINTAINER Fernando Ghinzelli  
+ENV PORT=3000  
+COPY . /var/www  
+WORKDIR /var/www  
+RUN npm install  
+ENTRYPOINT npm start  
+EXPOSE $PORT  
+~~~~
