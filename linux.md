@@ -5,6 +5,13 @@
 chomod u+r | chmod g+r | chmod o+r | chmod ugo+r
 ```
 
+## Find patterns
+```
+grep "<pattern>" <filename>  
+<command_output> | grep "pattern"
+```
+
+
 ## Links
 [Bash academy](https://www.bash.academy/)  
 [Bash Begginners Guide](http://www.tldp.org/LDP/Bash-Beginners-Guide/html/)  
