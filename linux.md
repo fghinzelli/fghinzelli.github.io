@@ -1,12 +1,12 @@
 # Comandos linux
 
 ## Alteração de permissões
-``` 
+```bash
 chomod u+r | chmod g+r | chmod o+r | chmod ugo+r
 ```
 
 ## Find patterns
-```
+```bash
 grep "<pattern>" <filename>  
 <command_output> | grep "pattern"
 ```
