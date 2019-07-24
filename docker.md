@@ -1,6 +1,6 @@
 # Comandos Docker
 
-## Comandos relacionados à informações
+## Comandos relacionados a informações
 
 `docker version` - exibe a versão do docker que está instalada.
 
