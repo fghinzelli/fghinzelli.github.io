@@ -64,6 +64,8 @@
 
 `docker network create --driver bridge NOME_DA_REDE` - cria uma rede especificando o driver desejado.
 
+`docker run --name MEU-CONTAINER --network NOME_DA_REDE NOME_IMAGEM` - Inicia um container na rede criada.
+
 ## Docker file  
 ~~~~
 FROM node:latest  
