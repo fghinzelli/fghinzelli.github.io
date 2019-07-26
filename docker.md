@@ -44,11 +44,11 @@
 
 ## Construção de Dockerfile
 
-`docker build -f Dockerfile` - cria uma imagem a partir de um Dockerfile.
+`docker build -f Dockerfile . ` - cria uma imagem a partir de um Dockerfile.
 
-`docker build -f Dockerfile -t NOME_USUARIO/NOME_IMAGEM`- constrói e nomeia uma imagem não-oficial.
+`docker build -f Dockerfile -t NOME_USUARIO/NOME_IMAGEM . `- constrói e nomeia uma imagem não-oficial.
 
-`docker build -f Dockerfile -t NOME_USUARIO/NOME_IMAGEM CAMINHO_DOCKERFILE`- constrói e nomeia uma imagem não-oficial informando o caminho para o Dockerfile.
+`docker build -f Dockerfile -t NOME_USUARIO/NOME_IMAGEM CAMINHO_DOCKERFILE . `- constrói e nomeia uma imagem não-oficial informando o caminho para o Dockerfile.
 
 ## Docker Hub - Enviar e Buscar imagens
 
