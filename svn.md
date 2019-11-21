@@ -34,6 +34,16 @@ svn propedit svn:ignore . # To multiple things, open the default editor
 # Ignore hieritable for all children
 svn propset svn:global-ignores ".git" .
 svn propedit svn:global-ignores . # To multiple things, open the default editor
+
+# Show all files, include the ignored
+svn status --no-ignore
+```
+
+**Commit changes**
+```sh
+# Add files
+svn add <files_or_path_or_pattern>
+svn commit -m "Message"
 ```
 
 # Configurations
