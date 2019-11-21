@@ -15,7 +15,7 @@ svn info svn://server_path:3960/<repository_name>
 ```sh
 svn propset svn:ignore "*.tmp" .
 svn propset svn:ignore dirname .
-svn propedit svn:ignore .
+svn propedit svn:ignore . # To multiple things, open the default editor
 ```
 
 # Configurations
