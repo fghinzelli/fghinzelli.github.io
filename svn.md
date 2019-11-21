@@ -4,10 +4,12 @@
 
 # Client commands
 
-- Repository info
+- **Repository info**
 
-```svn info svn://server_path:3960/<repository_name>```
-- Ignore files 
+```bash
+svn info svn://server_path:3960/<repository_name>
+```
+- **Ignore files**
 
 ```svn propset svn:ignore "*.tmp" .```
 - Ignore folder 
