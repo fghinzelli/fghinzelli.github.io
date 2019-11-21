@@ -5,12 +5,16 @@
 # Client commands
 
 - Repository info
+
 ```svn info svn://server_path:3960/<repository_name>```
-- Ignore files
+- Ignore files 
+
 ```svn propset svn:ignore "*.tmp" .```
-- Ignore folder
+- Ignore folder 
+
 ```svn propset svn:ignore dirname .```
-- Ignore multiple (open editor)
+- Ignore multiple (open editor) 
+
 ```svn propedit svn:ignore .```
 
 # Configurations
