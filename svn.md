@@ -16,6 +16,13 @@ svn info svn://server_path:3960/<repository_name>
 svn revert <path_or_file>
 ```
 
+**Remove files from version control**
+
+```sh
+svn delete <path_or_file> # remove the file from the directory local
+svn delete --keep-local <path_or_file> # keep the file unversioned in local directory
+```
+
 **Ignore files and folders**
 
 ```sh
