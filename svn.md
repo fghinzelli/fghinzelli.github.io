@@ -13,9 +13,14 @@ svn info svn://server_path:3960/<repository_name>
 **Ignore files and folders**
 
 ```sh
+# Ignore valid only to children files and folders
 svn propset svn:ignore "*.tmp" .
 svn propset svn:ignore dirname .
 svn propedit svn:ignore . # To multiple things, open the default editor
+
+# Ignore hieritable for all children
+svn propset svn:global-ignores ".git" .
+svn propedit svn:global-ignores . # To multiple things, open the default editor
 ```
 
 # Configurations
