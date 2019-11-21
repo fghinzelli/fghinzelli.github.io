@@ -35,8 +35,8 @@ svn propedit svn:ignore . # To multiple things, open the default editor
 svn propset svn:global-ignores ".git" .
 svn propedit svn:global-ignores . # To multiple things, open the default editor
 
-# Show all files, include the ignored
-svn status --no-ignore
+# Show all files ignored
+svn status --no-ignore | grep "^I"
 ```
 
 **Commit changes**
