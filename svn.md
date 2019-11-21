@@ -10,6 +10,12 @@
 svn info svn://server_path:3960/<repository_name>
 ```
 
+**Revert changes**
+
+```sh
+svn revert <path_or_file>
+```
+
 **Ignore files and folders**
 
 ```sh
