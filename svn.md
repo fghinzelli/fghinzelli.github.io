@@ -21,7 +21,7 @@ svn revert <path_or_file>
 ```sh
 svn delete <path_or_file> # remove the file from the directory local
 svn delete --keep-local <path_or_file> # keep the file unversioned in local directory
-```
+svn status | grep '^!' | awk '{print $2}' | xargs svn delete # remove all files missing (deleted/renamed)
 
 **Ignore files and folders**
 
