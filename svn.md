@@ -22,7 +22,7 @@ svn revert <path_or_file>
 svn delete <path_or_file> # remove the file from the directory local
 svn delete --keep-local <path_or_file> # keep the file unversioned in local directory
 svn status | grep '^!' | awk '{print $2}' | xargs svn delete # remove all files missing (deleted/renamed)
-
+``` 
 **Ignore files and folders**
 
 ```sh
@@ -30,12 +30,15 @@ svn status | grep '^!' | awk '{print $2}' | xargs svn delete # remove all files 
 svn propset svn:ignore "*.tmp" .
 svn propset svn:ignore dirname .
 svn propedit svn:ignore . # To multiple things, open the default editor
+```
 
 # Ignore hieritable for all children
+```sh
 svn propset svn:global-ignores ".git" .
 svn propedit svn:global-ignores . # To multiple things, open the default editor
-
+```
 # Show all files ignored
+```sh
 svn status --no-ignore | grep "^I"
 ```
 
