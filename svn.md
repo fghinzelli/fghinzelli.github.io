@@ -30,15 +30,12 @@ svn status | grep '^!' | awk '{print $2}' | xargs svn delete # remove all files 
 svn propset svn:ignore "*.tmp" .
 svn propset svn:ignore dirname .
 svn propedit svn:ignore . # To multiple things, open the default editor
-```
 
-** Ignore hieritable for all children
-```sh
+# Ignore hieritable for all children
 svn propset svn:global-ignores ".git" .
 svn propedit svn:global-ignores . # To multiple things, open the default editor
-```
+
 # Show all files ignored
-```sh
 svn status --no-ignore | grep "^I"
 ```
 
