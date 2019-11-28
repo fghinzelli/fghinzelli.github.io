@@ -32,7 +32,7 @@ svn propset svn:ignore dirname .
 svn propedit svn:ignore . # To multiple things, open the default editor
 ```
 
-# Ignore hieritable for all children
+** Ignore hieritable for all children
 ```sh
 svn propset svn:global-ignores ".git" .
 svn propedit svn:global-ignores . # To multiple things, open the default editor
