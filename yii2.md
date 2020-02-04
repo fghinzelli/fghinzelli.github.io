@@ -1,6 +1,78 @@
 # Yii2
  Framework PHP
  
+## Desenvolvimento com Docker
+ Estrutura com três containers: Aplicação + Database + Pgadmin
+ 
+- Dockerfile para geração da imagem para desenvolvimento:
+ ```docker
+FROM schmunk42/yii2-app-basic:latest
+
+RUN apt-get update \
+    && apt-get -y --no-install-recommends install php5-xdebug \
+    && apt-get clean \
+    && echo "zend_extension=/usr/lib/php5/20131226/xdebug.so" > /etc/php5/mods-available/xdebug.ini \
+    && echo "xdebug.remote_enable=on" >> /etc/php5/mods-available/xdebug.ini \
+    && echo "xdebug.remote_handler=dbgp" >> /etc/php5/mods-available/xdebug.ini \
+    && echo "xdebug.remote_port=9005" >> /etc/php5/mods-available/xdebug.ini \
+    && echo "xdebug.remote_autostart=on" >> /etc/php5/mods-available/xdebug.ini \
+    && echo "xdebug.remote_connect_back=0" >> /etc/php5/mods-available/xdebug.ini \
+    && echo "xdebug.idekey=netbeans-xdebug" >> /etc/php5/mods-available/xdebug.ini \
+    && echo "xdebug.profiler_enable=on" >> /etc/php5/mods-available/xdebug.ini \
+    && echo "xdebug.profiler_enable_trigger=on" >> /etc/php5/mods-available/xdebug.ini \
+    && echo "xdebug.remote_host=172.17.0.1" >> /etc/php5/mods-available/xdebug.ini
+ ```
+- Build da nova imagem:
+```console
+docker build -t fghinzelli/yii2 .
+```
+- Arquivo docker-compose.yml para os Três containers 
+```docker
+version: '3'
+
+services:
+  yii2-dev:
+    image: fghinzelli/yii2
+    container_name: yii2-dev
+    ports:
+      - "8000:80"
+    volumes:
+      - <path_repositorio_de_codigo>:/app
+    networks:
+      - yii2-network
+    depends_on:
+      - database
+
+  postgres:
+    image: postgres:9.6
+    container_name: database
+    ports:
+      - "5440:5432"
+    environment:
+      POSTGRES_PASSWORD: "password"
+    volumes:
+      - <path_postgres>:/var/lib/postgresql/data
+    networks:
+      - yii2-network
+
+  pgadmin4:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "user@domain.com"
+      PGADMIN_DEFAULT_PASSWORD: "password"
+    ports:
+      - "15432:80"
+    depends_on:
+      - postgres
+    networks:
+      - yii2-network
+
+networks:
+  yii2-network:
+    driver: bridge
+```
+ 
 ## Debugger
 
 1. Instalação e configuração do xdebug
