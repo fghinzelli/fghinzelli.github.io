@@ -4,12 +4,12 @@
 ## Debugger
 
 1. Instalação e configuração do xdebug
-```
+```console
 # Instala o xdebug
 apt-get update \
 && apt-get install -y --no-install-recommends install php5-xdebug \
 && apt-get clean \
-# Arocurar o local do arquivo xdebug.so
+# Procurar o local do arquivo xdebug.so
 find / -name xdebug.so
 # Adicionar as configurações do xdebug ao arquivo do módulo carregado pelo php
 echo "zend_extension=<path_do_arquivo_xdebug>/xdebug.so" > /etc/php5/mods-available/xdebug.ini \
@@ -25,5 +25,11 @@ echo "zend_extension=<path_do_arquivo_xdebug>/xdebug.so" > /etc/php5/mods-availa
 ```
 
 2. Configuração da IDE
-  * Netbeans
-  
+  * Netbeans (com PDT)
+     - *Tools > Options > PHP*. 
+        * Debugger Port: 9000 (Ou outra, caso esta não esteja disponível)
+        * Session ID: netbeans-xdebug (ou outro, mas deve ser igual ao definido no parâmetro xdebug.idekey) 
+     - *No Projeto > Properties > Run Configuration* 
+        * Run As: Local Web Site
+        * Project URL: http://localhost:8000/ (A porta é a usada pelo servidor web)
+        * Index File (IMPORTANTE): web/index.php
