@@ -5,7 +5,7 @@
  Estrutura com três containers: Aplicação + Database + Pgadmin
  
 - Dockerfile para geração da imagem para desenvolvimento:
- ```docker
+ ```console
 FROM schmunk42/yii2-app-basic:latest
 
 RUN apt-get update \
@@ -27,7 +27,7 @@ RUN apt-get update \
 docker build -t fghinzelli/yii2 .
 ```
 - Arquivo docker-compose.yml para os Três containers 
-```docker
+```console
 version: '3'
 
 services:
