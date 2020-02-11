@@ -10,8 +10,18 @@
  ```console
 FROM schmunk42/yii2-app-basic:latest
 
-RUN apt-get update \
-    && apt-get -y --no-install-recommends install php5-xdebug \
+# LDAP modules
+RUN apt update \
+    && apt remove -y php5-fpm \
+    && apt install -y php5-ldap \
+    && php5enmod ldap \
+    && apt install -y php5-fpm --option=Dpkg::Options::=--force-confdef
+
+# Ajuste de fuso horário
+RUN apt --only-upgrade install tzdata
+    
+# Xdebug    
+RUN apt-get -y --no-install-recommends install php5-xdebug \
     && apt-get clean \
     && echo "zend_extension=/usr/lib/php5/20131226/xdebug.so" > /etc/php5/mods-available/xdebug.ini \
     && echo "xdebug.remote_enable=on" >> /etc/php5/mods-available/xdebug.ini \
