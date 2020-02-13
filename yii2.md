@@ -117,3 +117,10 @@ echo "zend_extension=<path_do_arquivo_xdebug>/xdebug.so" > /etc/php5/mods-availa
         * Run As: Local Web Site
         * Project URL: http://localhost:8000/ (A porta é a usada pelo servidor web)
         * Index File (IMPORTANTE): web/index.php
+
+## Integração de app transpilada em React
+- Copiar os arquivos css e js para os diretórios /web/css e /web/js
+- Incluir arquivos Estáticos no arquivo AppAsset.php
+- Na página inicial da aplicação (/views/site/index.php) adicionar a div principal: ``` <div id="root"></div> ```
+
+
