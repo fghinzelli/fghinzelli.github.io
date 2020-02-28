@@ -118,3 +118,7 @@ networks:
     production-network:
         driver: bridge
 ~~~~
+
+## Logs
+
+`docker logs <container-id>`
