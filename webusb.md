@@ -19,5 +19,5 @@ https://github.com/drffej/webusb.printer
 ### Utilitários
 - Verificar logs   
 ```chrome://device-log/```
-- Autorizações USB
+- Autorizações USB   
 ```chrome://settings/content/usbDevices?search=usb```
