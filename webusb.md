@@ -22,7 +22,7 @@ https://github.com/drffej/webusb.printer
     ```grep -l <bus>/<device> /sys/bus/usb/devices/*/uevent```
     * Ou visualizar informações do device conectado nos logs do kernel   
     ```tail -f /var/log/kern.log```
-    * Unbind do dispositivo
+    * Unbind do dispositivo   
     ```echo -n "1-1.5:1.0" > /sys/bus/usb/drivers/usblp/unbind```
 
 ### Utilitários
