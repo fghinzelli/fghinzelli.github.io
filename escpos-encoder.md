@@ -11,6 +11,7 @@ https://www.npmjs.com/package/esc-pos-encoder
 ### Links de conteúdo
 https://reliance-escpos-commands.readthedocs.io/en/latest/imaging.html
 https://reference.epson-biz.com/modules/ref_escpos/index.php?content_id=88
+https://reliance-escpos-commands.readthedocs.io/en/latest/font_cmds.html
 
 ```js
 function print() {
