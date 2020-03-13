@@ -2,6 +2,8 @@
 
 [Documentação](https://wicg.github.io/webusb/)
 
+Obs.: Funciona somente em localhost com http, em outros hosts, precisa ser https
+
 ### Exemplo
 https://github.com/drffej/webusb.printer
 
