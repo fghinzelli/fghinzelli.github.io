@@ -13,6 +13,8 @@ https://github.com/drffej/webusb.printer
 ### Observações para execução em ambiente Linux
 - Permissões especiais:  
  https://developers.google.com/web/fundamentals/native-hardware/build-for-webusb/#linux
+    * Arquivo */etc/udev/rules.d/80-snap.core.rules* criado com o conteúdo:
+    ```SUBSYSTEMS=="usb", ATTR{idVendor}=="03f4", ATTR{idProduct}=="2006", GROUP="plugdev"```
 
 - Desativar o driver do SO:  
  https://stackoverflow.com/questions/47695160/failed-to-claim-interface-0-device-or-resource-busy/47724582
