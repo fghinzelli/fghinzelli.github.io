@@ -10,7 +10,10 @@ chomod u+r | chmod g+r | chmod o+r | chmod ugo+r
 grep "<pattern>" <filename>  
 <command_output> | grep "pattern"
 ```
-
+## Find process ID
+```bash
+ps -A | pgrep code
+```
 
 ## Links
 [Bash academy](https://www.bash.academy/)  
