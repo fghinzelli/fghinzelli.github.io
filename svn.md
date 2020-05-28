@@ -16,6 +16,12 @@ svn info svn://server_path:3960/<repository_name>
 svn revert <path_or_file>
 ```
 
+** Add files**
+```
+svn add <file/directory> # Add new file/directory
+svn status | grep '^?' | awk '{print $2}' | xargs svn add # Add all new files
+```
+
 **Remove files from version control**
 
 ```sh
