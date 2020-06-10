@@ -15,6 +15,9 @@ grep "<pattern>" <filename>
 ps -A | pgrep code
 ```
 
+## VNC
+[https://www.server-world.info/en/note?os=Ubuntu_19.04&p=desktop&f=5](https://www.server-world.info/en/note?os=Ubuntu_19.04&p=desktop&f=5)
+
 ## Links
 [Bash academy](https://www.bash.academy/)  
 [Bash Begginners Guide](http://www.tldp.org/LDP/Bash-Beginners-Guide/html/)  
