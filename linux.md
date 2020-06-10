@@ -17,6 +17,7 @@ ps -A | pgrep code
 
 ## VNC
 [https://www.server-world.info/en/note?os=Ubuntu_19.04&p=desktop&f=5](https://www.server-world.info/en/note?os=Ubuntu_19.04&p=desktop&f=5)
+[https://www.tecmint.com/install-and-configure-vnc-server-on-ubuntu/](https://www.tecmint.com/install-and-configure-vnc-server-on-ubuntu/)
 
 ## Links
 [Bash academy](https://www.bash.academy/)  
