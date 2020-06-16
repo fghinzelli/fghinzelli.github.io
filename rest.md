@@ -14,3 +14,7 @@ As semânticas principais são:
 **PUT** - adiciona (ou modifica) um recurso na URI passada. Ex: atualizar um restaurante.
 
 **DELETE** - remove o recurso representado pela URI passada. Ex: remover um restaurante.
+
+## Representações
+
+Cabeçalhos(Accept/Content-Type) são usados para especificar as representações(JSON,XML,...)
