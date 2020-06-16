@@ -11,3 +11,4 @@
 * **URI** - [Uniform Resource Identifier](https://pt.wikipedia.org/wiki/URI)
 * **URL** - [Uniform Resource Locator](https://pt.wikipedia.org/wiki/URL)
 * **URN** - [Uniform Resource Name](https://pt.wikipedia.org/wiki/URN)
+* **REST** - [Representational State Transfer](https://pt.wikipedia.org/wiki/REST)
