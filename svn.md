@@ -1,6 +1,8 @@
 # Server commands
-## Create a new repository
+**Create a new repository**
 ```svnadmin create <repository_name>```
+**Edit permissions**
+ Edit de files in the folder <directory>/conf (authz, passwd, perms, svnserve.conf)
 
 # Client commands
 
@@ -50,6 +52,12 @@ svn status --no-ignore | grep "^I"
 # Add files
 svn add <files_or_path_or_pattern>
 svn commit -m "Message"
+```
+
+# Branching
+**Create new brach**
+```
+svn copy svn://<server>/<repository>/trunk svn://<server>/<repository>/branches/<new_branch>
 ```
 
 # Configurations
