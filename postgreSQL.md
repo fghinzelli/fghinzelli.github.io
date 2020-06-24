@@ -14,7 +14,7 @@
 
 * **Connect to a database**
 ```sql
-  psql -U postgres
+  psql -U postgres -p <porta> -h <host> -d <database_name>
 ```
 
 * **Listar databases**
