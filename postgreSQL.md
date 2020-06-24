@@ -10,19 +10,19 @@
 
 
 
-#### Comandos via terminal
+## Client commands
 
-##### Conectar à base local
+* **Connect to a database**
 ```sql
   psql -U postgres
 ```
 
-##### Listar databases
+* **Listar databases**
 ```sql
   \l
 ```
 
-#### Restaurar backup
+* **Restaurar backup**
 ```sql
   pg_restore --user <usuario> --dbname=<database_name> <arquivo_backup.dmp>
 ```
