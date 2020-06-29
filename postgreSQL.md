@@ -26,3 +26,8 @@
 ```sql
   pg_restore --user <usuario> --dbname=<database_name> <arquivo_backup.dmp>
 ```
+
+* **Alterar formato de data**
+```sql
+ALTER DATABASE doe SET datestyle TO "ISO, DMY";
+```
