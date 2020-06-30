@@ -22,8 +22,9 @@
   \l
 ```
 
-* **Restaurar backup**
+* **Backup / Restore**
 ```sql
+  pg_dump -h <host> -d <database> -U <usuario> > <arquivo_backup.dmp>
   pg_restore --user <usuario> --dbname=<database_name> <arquivo_backup.dmp>
 ```
 
