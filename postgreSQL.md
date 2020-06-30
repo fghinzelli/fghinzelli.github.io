@@ -24,8 +24,12 @@
 
 * **Backup / Restore**
 ```sql
-  pg_dump -h <host> -d <database> -U <usuario> > <arquivo_backup.dmp>
-  pg_restore --user <usuario> --dbname=<database_name> <arquivo_backup.dmp>
+  pg_dump -h <host> -d <database> -U <usuario> -v > <arquivo_backup.dmp>
+  
+  pg_restore -U <usuario> -d=<database_name> < <arquivo_backup.dmp>
+  
+  # Restore from text file
+  psql -h <host> -p <port> -U <usuario> -d <database> < <file_backup.sql>
 ```
 
 * **Alterar formato de data**
