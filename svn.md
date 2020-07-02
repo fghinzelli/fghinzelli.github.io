@@ -1,6 +1,7 @@
 # Server commands
 **Create a new repository**
 ```svnadmin create <repository_name>```
+
 **Edit permissions**
  Edit de files in the folder <directory>/conf (authz, passwd, perms, svnserve.conf)
 
@@ -30,6 +31,9 @@ svn status | grep '^?' | awk '{print $2}' | xargs svn add # Add all new files
 svn delete <path_or_file> # remove the file from the directory local
 svn delete --keep-local <path_or_file> # keep the file unversioned in local directory
 svn status | grep '^!' | awk '{print $2}' | xargs svn delete # remove all files missing (deleted/renamed)
+
+# Remove files from server
+svn delete svn://<svn_server>/<repo>/<path_to_delete> -m "Message to commit"
 ``` 
 **Ignore files and folders**
 
