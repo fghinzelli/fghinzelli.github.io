@@ -4,7 +4,7 @@
 
 ## Server commands
 * **Reload server/configs**
-```service postgres-9.6 reload```
+```service postgres-9.6 reload``` or 
 ```/etc/init.d/postgresql-8.2 reload```
 * **Permissões de acesso**
 ```vim /var/lib/pgsql/pg_hba.conf```
