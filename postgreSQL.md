@@ -3,8 +3,9 @@
 [Documentação](https://www.postgresql.org/docs/)
 
 ## Server commands
-* **Reload server**
+* **Reload server/configs**
 ```service postgres-9.6 reload```
+```/etc/init.d/postgresql-8.2 reload```
 * **Permissões de acesso**
 ```vim /var/lib/pgsql/pg_hba.conf```
 
