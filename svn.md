@@ -13,6 +13,11 @@
 svn info svn://server_path:3960/<repository_name>
 ```
 
+```sh
+svn info
+# Returns the info about the current path on svn
+```
+
 **Revert changes**
 
 ```sh
