@@ -12,3 +12,4 @@
 * **URL** - [Uniform Resource Locator](https://pt.wikipedia.org/wiki/URL)
 * **URN** - [Uniform Resource Name](https://pt.wikipedia.org/wiki/URN)
 * **REST** - [Representational State Transfer](https://pt.wikipedia.org/wiki/REST)
+* **Gold platting** - Practice in which features not requested by the user are arbitrarily added to the project
