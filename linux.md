@@ -1,6 +1,12 @@
-# Comandos linux
+# Linux
 
-## Alteração de permissões
+## Add a program to default path
+```bash
+# Create a symbolic link in /usr/local/lib
+ln -s /opt/program/program.sh /usr/local/lib
+``` 
+
+## Change permissions
 ```bash
 chomod u+r | chmod g+r | chmod o+r | chmod ugo+r
 ```
@@ -24,3 +30,4 @@ ps -A | pgrep code
 [Bash Begginners Guide](http://www.tldp.org/LDP/Bash-Beginners-Guide/html/)  
 [Bash Prog](http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html)  
 [Regex](https://regexr.com/)  
+
