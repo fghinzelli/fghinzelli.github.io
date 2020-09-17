@@ -21,6 +21,11 @@ grep "<pattern>" <filename>
 ps -A | pgrep code
 ```
 
+## Disk space
+```df
+du -sh <directory_name> # Espaço de uma pasta
+```
+
 ## VNC
 [https://www.server-world.info/en/note?os=Ubuntu_19.04&p=desktop&f=5](https://www.server-world.info/en/note?os=Ubuntu_19.04&p=desktop&f=5)
 [https://www.tecmint.com/install-and-configure-vnc-server-on-ubuntu/](https://www.tecmint.com/install-and-configure-vnc-server-on-ubuntu/)
