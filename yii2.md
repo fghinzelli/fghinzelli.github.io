@@ -123,4 +123,6 @@ echo "zend_extension=<path_do_arquivo_xdebug>/xdebug.so" > /etc/php5/mods-availa
 - Incluir arquivos Estáticos no arquivo AppAsset.php
 - Na página inicial da aplicação (/views/site/index.php) adicionar a div principal: ``` <div id="root"></div> ```
 
-
+## Gii
+Para geração/atualização dos arquivos de Internacionalização (/app/messages/pt-BR/):
+``` php yii message-enum "@app/config/i18n.php" ``` 
