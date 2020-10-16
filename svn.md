@@ -74,4 +74,7 @@ To change the default editor for subversion, access the file ```~/.subversion/co
 ```
 [helpers]
 editor-cmd = vim
+
+# Articles
+https://dev.to/rajbdilip/quick-svn-guide-for-git-users-svn-the-git-way-26al
 ```
