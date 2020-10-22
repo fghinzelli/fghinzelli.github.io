@@ -1,6 +1,7 @@
 
 ~/.vimrc
 ```bash
+colorscheme industry
 set nu       "mostra numeração de linhas
 set showmode "mostra o modo em que estamos
 set showcmd  "mostra no status os comandos inseridos
