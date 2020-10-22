@@ -8,3 +8,9 @@ cd /opt/google/chrome
 # Run 
 LANGUAGE=pt_BR ./chrome
 ```
+
+- Enable usb Devices
+```
+# Run in the navigator
+chrome://settings/content/usbDevices?search=usb
+```
