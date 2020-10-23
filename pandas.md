@@ -27,6 +27,8 @@ data[<COLUMN_KEY>].hist() # Histogram
 data[<COLUMN_KEY>].hist(bins = 20) # Histogram with more divisions
 data[<COLUMN_KEY>].hist(bins = 20, figsize=(10,8)) # Difine size of the picture
 data[<COLUMN_KEY>].plot.box(grid = True, figsize=(8,6)) # Box plot
+data[<COLUMN_KEY>].value_counts().plot.pie(figsize=(10,8)) # Pie graph
+data[<COLUMN_KEY>].value_counts().plot.bar(figsize=(10,8)) # Bars graph
 ```
 
 - Utils functions
