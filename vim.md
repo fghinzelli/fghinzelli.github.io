@@ -51,3 +51,6 @@ Examples:
 - Navegation: ctrl + ww
 - Zoom: ctrl+w + _
 - Zoom restart: ctrl+w + 0
+
+## Plugins
+- NERDTree 
