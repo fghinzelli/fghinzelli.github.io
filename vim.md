@@ -28,3 +28,9 @@ set ttyfast    "Envia mais caracteres ao terminal, melhorando o redraw de janela
 
 Examples:  
 10 + k 
+
+## Modes
+- **Visual** (v)
+- **Visual Line** (shift + v)
+- **Visual Block** (ctrl + v)
+
