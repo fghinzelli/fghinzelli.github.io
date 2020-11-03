@@ -37,6 +37,7 @@ Examples:
 - Begin of file: (gg)
 - End of file (shift + g)
 - Indent line (==)
+- Replace (r + character)
 
 ## Modes
 - **Insert** (i)
@@ -48,3 +49,5 @@ Examples:
 - Vertical :  vs <path_file>
 - Horizontal: sp <path_file>
 - Navegation: ctrl + ww
+- Zoom: ctrl+w + _
+- Zoom restart: ctrl+w + 0
