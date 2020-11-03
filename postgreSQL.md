@@ -37,3 +37,8 @@
 ```sql
 ALTER DATABASE doe SET datestyle TO "ISO, DMY";
 ```
+
+* **Permissões**
+```sql
+GRANT ALL PERMISSIONS ON DATABASE|TABLE <name> TO <username>;
+```
