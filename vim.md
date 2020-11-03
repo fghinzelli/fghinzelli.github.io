@@ -29,7 +29,16 @@ set ttyfast    "Envia mais caracteres ao terminal, melhorando o redraw de janela
 Examples:  
 10 + k 
 
+## Commands
+- New line + insert mode : (o)
+- Copy : (y)
+- Paste : (p)
+- Begin of file: (gg)
+- End of file (shift + g)
+- Indent line (==)
+
 ## Modes
+- **Insert** (i)
 - **Visual** (v)
 - **Visual Line** (shift + v)
 - **Visual Block** (ctrl + v)
