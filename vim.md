@@ -31,6 +31,7 @@ Examples:
 
 ## Commands
 - New line + insert mode : (o)
+- New line up + insert mode : (shift + o)
 - Copy : (y)
 - Paste : (p)
 - Begin of file: (gg)
@@ -43,3 +44,7 @@ Examples:
 - **Visual Line** (shift + v)
 - **Visual Block** (ctrl + v)
 
+## Splitt screen
+- Vertical :  vs <path_file>
+- Horizontal: sp <path_file>
+- Navegation: ctrl + ww
