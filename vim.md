@@ -54,3 +54,11 @@ Examples:
 
 ## Plugins
 - NERDTree 
+  - (s) Select a new file and split the screen
+
+## Record a sequence of commands
+
+(q) + some key (ex.: q + a)
+insert the commands
+(q)
+To execute de sequence of commands, press @ + key (Ex.: @ + a)
