@@ -17,6 +17,13 @@ set smartcase  "Se começar uma busca em maiúsculo ele habilita o case
 set cul        "abreviação de cursor line (destaca linha atual)
 set ve=all     "permite mover o cursor para áreas onde não há texto
 set ttyfast    "Envia mais caracteres ao terminal, melhorando o redraw de janelas. 
+set shiftwidth=2 "Deixa coerente com o tab ao dar enter
+set backspace=2 "Habilita a exclusãod e caracteres ao usar backspace
+set fileencoding=iso-8859-1 " Define a codificação para salvar
+set encoding=iso-8859-1 " Define a codificação para a abertura de arquivos
+set expandtab " Usar espaços no lugar de tabs
+set softtabstop=2 " Backspace deve respeitar a identação
+
 ```
 
 
@@ -55,6 +62,10 @@ Examples:
 ## Plugins
 - NERDTree 
   - (s) Select a new file and split the screen
+
+## Insert new colorscheme
+- Download the file of the scheme in ~/.vim/colors
+- Set parameter colorscheme in .vimrc
 
 ## Record a sequence of commands
 
