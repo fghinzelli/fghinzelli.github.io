@@ -65,6 +65,7 @@ svn commit -m "Message"
 
 # Branching
 http://svnbook.red-bean.com/en/1.7/svn.branchmerge.basicmerging.html#svn.branchemerge.basicmerging.reintegrate
+
 **Create new brach**
 ```
 svn copy svn://<server>/<repository>/trunk svn://<server>/<repository>/branches/<new_branch>
