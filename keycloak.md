@@ -19,3 +19,7 @@ https://hub.docker.com/r/jboss/keycloak/dockerfile
 ```
   
 https://developers.redhat.com/blog/2019/05/31/working-with-red-hat-enterprise-linux-universal-base-images-ubi/
+
+
+## Run standalone
+```./bin/standalone.sh  -Djboss.socket.binding.port-offset=8088```
