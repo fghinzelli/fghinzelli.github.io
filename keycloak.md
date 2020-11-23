@@ -22,4 +22,4 @@ https://developers.redhat.com/blog/2019/05/31/working-with-red-hat-enterprise-li
 
 
 ## Run standalone
-```./bin/standalone.sh  -Djboss.socket.binding.port-offset=8088```
+```./bin/standalone.sh -b 0.0.0.0 -Djboss.socket.binding.port-offset=8088 &```
