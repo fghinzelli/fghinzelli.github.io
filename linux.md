@@ -29,6 +29,11 @@ du -sh <directory_name> # Espaço de uma pasta
 ## Convert to base64
 ``` echo -n 'user:pwd' | base64 ```
 
+## DNS
+
+- Clear DNS
+``` sudo systemd-resolve --flush-caches ```
+
 ## VNC
 [https://www.server-world.info/en/note?os=Ubuntu_19.04&p=desktop&f=5](https://www.server-world.info/en/note?os=Ubuntu_19.04&p=desktop&f=5)
 [https://www.tecmint.com/install-and-configure-vnc-server-on-ubuntu/](https://www.tecmint.com/install-and-configure-vnc-server-on-ubuntu/)
