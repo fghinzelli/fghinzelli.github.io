@@ -38,7 +38,7 @@
 ALTER DATABASE doe SET datestyle TO "ISO, DMY";
 ```
 
-* ** Alterar timezone**
+* **Alterar timezone**
 ```SET TIMEZONE='Brazil/East'```
 
 * **Permissões**
