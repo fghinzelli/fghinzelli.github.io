@@ -38,6 +38,9 @@
 ALTER DATABASE doe SET datestyle TO "ISO, DMY";
 ```
 
+* ** Alterar timezone**
+```SET TIMEZONE='Brazil/East'```
+
 * **Permissões**
 ```sql
 GRANT ALL PRIVILEGES ON DATABASE|TABLE <name> TO <username>;
