@@ -28,6 +28,8 @@ https://github.com/drffej/webusb.printer
     ```tail -f /var/log/kern.log```
     * Unbind do dispositivo   
     ```echo -n "1-1.5:1.0" > /sys/bus/usb/drivers/usblp/unbind```
+    ou
+    ```echo -n "3-4:1.0" > /sys/bus/usb/drivers/cdc_acm/unbind```
     
     * Extra: Unbind on boot:  
     http://migueleonardortiz.com.ar/linux/learning-how-to-disable-specific-usb-devices-by-their-ports-in-linux/1645
