@@ -24,6 +24,14 @@ $preparedStatement = $pdo->prepare($sql);
 $preparedStatement->bindValue(1, 'MyName');
 //$preparedStatement->baindValue(':name', 'MyName');
 $preparedStatement->execute(); // Returns a bool value
+```
 
+### Display Errors
+```
+/* On php.ini */
+display_errors = On
 
+/* In Header of the file file .php */
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 ```
