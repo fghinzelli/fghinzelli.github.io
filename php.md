@@ -9,7 +9,8 @@
 
 ### PDO
 
-``` $pdo = new PDO('DSN:<parameteres>');
+```php
+$pdo = new PDO('DSN:<parameteres>');
 $statement = $pdo->exec('CREATE TABLE tableTest (id PRIMARY KEY, name TEXT');
 
 $query = $pdo->query('SELECT * FROM tableTest');
