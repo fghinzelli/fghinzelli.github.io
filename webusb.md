@@ -34,6 +34,9 @@ https://github.com/drffej/webusb.printer
     * Extra: Unbind on boot:  
     http://migueleonardortiz.com.ar/linux/learning-how-to-disable-specific-usb-devices-by-their-ports-in-linux/1645
     
+- Instalação de drivers bematech    
+    http://bematechpartners.com.br/wiki/index.php/2017/10/20/linux-utilizando-impressoras-e-sat-bematech-terminal-ou-arquivo-de-regras/
+    
 
 ### Utilitários
 - Verificar logs   
