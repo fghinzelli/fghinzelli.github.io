@@ -12,7 +12,15 @@ https://github.com/drffej/webusb.printer
 - https://developers.google.com/web/fundamentals/native-hardware/build-for-webusb/
 - https://medium.com/@gendor/connecting-to-usb-devices-with-your-browser-d433a6df6f2
 
+
 ### Observações para execução em ambiente Linux
+- Testar comunicação com a impressora:
+http://bematechpartners.com.br/wiki/index.php/2018/04/09/2039/
+```
+dmesg
+echo “teste impressão MP4200TH” > /dev/ttyACM0
+```
+
 - Permissões especiais:  
  https://developers.google.com/web/fundamentals/native-hardware/build-for-webusb/#linux
     * Arquivo */etc/udev/rules.d/80-snap.core.rules* criado com o conteúdo:
