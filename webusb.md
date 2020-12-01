@@ -36,7 +36,7 @@ https://github.com/drffej/webusb.printer
     
 - Instalação de drivers bematech    
     http://bematechpartners.com.br/wiki/index.php/2017/10/20/linux-utilizando-impressoras-e-sat-bematech-terminal-ou-arquivo-de-regras/
-    
+    http://bematechpartners.com.br/wiki/index.php/2017/06/22/utilizando-a-mp-4200-th-no-linux/
 
 ### Utilitários
 - Verificar logs   
