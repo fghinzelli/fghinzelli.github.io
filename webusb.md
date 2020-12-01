@@ -45,6 +45,7 @@ echo “teste impressão MP4200TH” > /dev/ttyACM0
 - Instalação de drivers bematech    
     http://bematechpartners.com.br/wiki/index.php/2017/10/20/linux-utilizando-impressoras-e-sat-bematech-terminal-ou-arquivo-de-regras/
     http://bematechpartners.com.br/wiki/index.php/2017/06/22/utilizando-a-mp-4200-th-no-linux/
+    http://bematechpartners.com.br/wiki/index.php/2020/01/24/erro-em-cups-linux-com-a-mp4200-th/
 
 ### Utilitários
 - Verificar logs   
