@@ -27,7 +27,7 @@ $preparedStatement->execute(); // Returns a bool value
 ```
 
 ### Display Errors
-```
+```php
 /* On php.ini */
 display_errors = On
 
