@@ -38,6 +38,8 @@ echo “teste impressão MP4200TH” > /dev/ttyACM0
     ```echo -n "1-1.5:1.0" > /sys/bus/usb/drivers/usblp/unbind```
     ou
     ```echo -n "3-4:1.0" > /sys/bus/usb/drivers/cdc_acm/unbind```
+    * Se a impressora em \dev\ttyS<n> estiver com permissões apenas para root, liberar as permissões
+    ```chmod 777 /dev/ttyS[0--9]```
     
     * Extra: Unbind on boot:  
     http://migueleonardortiz.com.ar/linux/learning-how-to-disable-specific-usb-devices-by-their-ports-in-linux/1645
