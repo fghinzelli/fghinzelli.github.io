@@ -51,8 +51,8 @@ echo “teste impressão MP4200TH” > /dev/ttyACM0
     http://bematechpartners.com.br/wiki/index.php/2020/01/24/erro-em-cups-linux-com-a-mp4200-th/
 
 - Outros links   
- https://web.dev/usb/
- https://www.visuality.pl/posts/webusb-bridge-between-usb-devices-and-web-browsers
+ https://web.dev/usb/    
+ https://www.visuality.pl/posts/webusb-bridge-between-usb-devices-and-web-browsers  
 ### Utilitários
 - Verificar logs   
 ```chrome://device-log/```
