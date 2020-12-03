@@ -53,6 +53,9 @@ echo “teste impressão MP4200TH” > /dev/ttyACM0
 - Outros links   
  https://web.dev/usb/    
  https://www.visuality.pl/posts/webusb-bridge-between-usb-devices-and-web-browsers  
+ https://medium.com/@gendor/connecting-to-usb-devices-with-your-browser-d433a6df6f2
+ 
+ 
 ### Utilitários
 - Verificar logs   
 ```chrome://device-log/```
