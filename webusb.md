@@ -6,6 +6,7 @@ Obs.: Funciona somente em localhost com http, em outros hosts, precisa ser https
 
 ### Exemplo
 https://github.com/drffej/webusb.printer
+https://web.dev/usb/
 
 ### Referências: 
 - https://developers.google.com/web/updates/2016/03/access-usb-devices-on-the-web
@@ -49,6 +50,9 @@ echo “teste impressão MP4200TH” > /dev/ttyACM0
     http://bematechpartners.com.br/wiki/index.php/2017/06/22/utilizando-a-mp-4200-th-no-linux/
     http://bematechpartners.com.br/wiki/index.php/2020/01/24/erro-em-cups-linux-com-a-mp4200-th/
 
+- Outros links   
+ https://web.dev/usb/
+ https://www.visuality.pl/posts/webusb-bridge-between-usb-devices-and-web-browsers
 ### Utilitários
 - Verificar logs   
 ```chrome://device-log/```
