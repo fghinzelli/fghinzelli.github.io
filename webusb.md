@@ -55,7 +55,7 @@ echo “teste impressão MP4200TH” > /dev/ttyACM0
  https://www.visuality.pl/posts/webusb-bridge-between-usb-devices-and-web-browsers  
  https://medium.com/@gendor/connecting-to-usb-devices-with-your-browser-d433a6df6f2
  
- *** Sequencia funcional no Ubuntu Linux    
+- Sequencia funcional no Ubuntu Linux    
  
  ```
 #!/bin/bash
@@ -68,7 +68,7 @@ echo -n $PORTID:1.0 >  /sys/bus/usb/drivers/cdc_acm/unbind
 echo 'Driver unbounded'
 echo 'Finish!'
  ```
-**** A chamada para o script pode ser adicionada no arquivo /etc/rc.local ****    
+**A chamada para o script pode ser adicionada no arquivo /etc/rc.local**    
 ``` 
 ./home/fghinzelli/projetos/telao/atendimento/printer-config.sh  &
  exit 0
