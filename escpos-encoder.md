@@ -81,3 +81,5 @@ function print() {
   
   }
 ```
+
+https://www.npmjs.com/package/node-thermal-printer
