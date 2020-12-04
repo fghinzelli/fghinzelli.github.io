@@ -68,7 +68,11 @@ echo -n $PORTID:1.0 >  /sys/bus/usb/drivers/cdc_acm/unbind
 echo 'Driver unbounded'
 echo 'Finish!'
  ```
- 
+**** A chamada para o script pode ser adicionada no arquivo /etc/rc.local ****    
+``` 
+./home/fghinzelli/projetos/telao/atendimento/printer-config.sh  &
+ exit 0
+```  
  
 ### Utilitários
 - Verificar logs   
