@@ -55,6 +55,15 @@ echo “teste impressão MP4200TH” > /dev/ttyACM0
  https://www.visuality.pl/posts/webusb-bridge-between-usb-devices-and-web-browsers  
  https://medium.com/@gendor/connecting-to-usb-devices-with-your-browser-d433a6df6f2
  
+ *** Sequencia funcional no Ubuntu Linux    
+ ```bash
+ #!/bin/bash
+echo ' ' > /dev/ttyACM0 && echo ' ' > /dev/ttyACM0
+# chmod 777 /dev/ttyS*
+PORTID=$(grep -l 'b1b/3' /sys/bus/usb/devices/*/uevent | tail -1 | tr "/" " " | awk '{print $5}')
+echo -n $PORTID:1.0 >  /sys/bus/usb/drivers/cdc_acm/unbind
+ ```
+ 
  
 ### Utilitários
 - Verificar logs   
