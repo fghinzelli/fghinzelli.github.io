@@ -70,6 +70,7 @@ echo 'Finish!'
  ```
 
 **SOLUÇÃO DEFINITIVA**   
+https://linuxconfig.org/tutorial-on-how-to-write-basic-udev-rules-in-linux   
 1.Criar o script a seguir em /usr/local/bin/unbind_printer.sh:   
 ``` 
 #!/bin/bash
