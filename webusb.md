@@ -77,13 +77,10 @@ https://linuxconfig.org/tutorial-on-how-to-write-basic-udev-rules-in-linux
 exec &> /tmp/log_print_umbound.txt
 echo ' ' > /dev/ttyACM0 && echo ' ' > /dev/ttyACM0
 PORTID=$(grep -l 'b1b/3' /sys/bus/usb/devices/*/uevent | tail -1 | tr "/" " " | awk '{print $5}')
-echo ${PORTID:0:3}
 echo -n ${PORTID:0:3}:1.0 >  /sys/bus/usb/drivers/cdc_acm/unbind
-echo 'Driver unbounded'
-echo 'Finish!'
 ```
 2.Criar o arquivo */etc/udev/rules.d/99-bematech.role* com o seguinte conteúdo:   
-```ACTION=="add" SUBSYSTEM=="usb", ATTRS{idVendor}=="0b1b", ATTRS{idProduct}=="0003", GROUP="plugdev", RUN+="/usr/local/bin/unbind_printer.sh"```   
+```ACTION=="add", SUBSYSTEM=="usb", ATTRS{idVendor}=="0b1b", ATTRS{idProduct}=="0003", ATTR{bInterfaceNumber}=="00", GROUP="plugdev", RUN+="/usr/local/bin/unbind_printer.sh"```   
 
 **A chamada para o script pode ser adicionada no arquivo /etc/rc.local**    
 ``` 
