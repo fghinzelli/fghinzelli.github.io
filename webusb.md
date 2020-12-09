@@ -69,7 +69,7 @@ echo 'Driver unbounded'
 echo 'Finish!'
  ```
 
-** SOLUÇÃO DEFINITIVA
+**SOLUÇÃO DEFINITIVA**
 1 - Criar o script a seguir em /usr/local/bin/unbind_printer.sh:   
 ``` 
 #!/bin/bash
