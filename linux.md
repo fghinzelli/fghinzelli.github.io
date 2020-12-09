@@ -29,6 +29,14 @@ du -sh <directory_name> # Espaço de uma pasta
 ## Convert to base64
 ``` echo -n 'user:pwd' | base64 ```
 
+
+# Log in bash   
+``` 
+#!/bin/bash
+# redirect stdout/stderr to a file
+exec &> logfile.txt 
+```
+
 ## DNS
 
 - Clear DNS
