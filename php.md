@@ -36,3 +36,6 @@ display_errors = On
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 ```
+
+### Migration to php7
+https://blog.fortrabbit.com/php-testing
