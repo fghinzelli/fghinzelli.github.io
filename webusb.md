@@ -99,4 +99,6 @@ echo -n ${PORTID:0:3}:1.0 >  /sys/bus/usb/drivers/cdc_acm/unbind
 ``` udevadm test --action="change" /devices/pci0000:00/0000:00:14.0/usb3/3-4/3-4:1.0/ ```  
 - Reload das configurações udev   
 ``` udevadm control --reload ```
+- Restart udev   
+```sudo service udev restart```
 
