@@ -74,3 +74,6 @@ ALTER USER myuser WITH SUPERUSER;
 --9. Remove superuser status:
 ALTER USER username WITH NOSUPERUSER;
 ```
+* **CAST**
+
+``` TO_CHAR(TO_TIMESTAMP(bigint_field / 1000), 'DD/MM/YYYY HH24:MI:SS')```
