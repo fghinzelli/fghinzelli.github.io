@@ -1,5 +1,7 @@
 ## PHP Notes
 
+https://phptherightway.com/
+
 ### Execute test of compatibility
 
  https://blog.fortrabbit.com/php-testing
