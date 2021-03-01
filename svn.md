@@ -42,6 +42,8 @@ svn delete svn://<svn_server>/<repo>/<path_to_delete> -m "Message to commit"
 ``` 
 **Ignore files and folders**
 
+IMPORTANT: The propset is related to the current folder. Not include paths, to subfolders
+
 ```sh
 # Ignore valid only to children files and folders
 svn propset svn:ignore "*.tmp" .
