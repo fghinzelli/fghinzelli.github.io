@@ -82,6 +82,9 @@ echo -n ${PORTID:0:3}:1.0 >  /sys/bus/usb/drivers/cdc_acm/unbind
 2.Criar o arquivo */etc/udev/rules.d/99-bematech.role* com o seguinte conteúdo:   
 ```ACTION=="add", SUBSYSTEM=="usb", ATTRS{idVendor}=="0b1b", ATTRS{idProduct}=="0003", ATTR{bInterfaceNumber}=="00", GROUP="plugdev", RUN+="/usr/local/bin/unbind_printer.sh"```   
 
+3. Incluir o usuário no grupo plugdev
+```sudo usermod -a -G plugdev <username>```
+
 **A chamada para o script pode ser adicionada no arquivo /etc/rc.local**    
 ``` 
 ./home/fghinzelli/projetos/telao/atendimento/printer-config.sh  &
