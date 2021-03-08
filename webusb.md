@@ -90,6 +90,16 @@ echo -n ${PORTID:0:3}:1.0 >  /sys/bus/usb/drivers/cdc_acm/unbind
 ./home/fghinzelli/projetos/telao/atendimento/printer-config.sh  &
  exit 0
 ```  
+
+### Passo-a-passo Impressora Diebold:
+1. Criar o arquivo */etc/udev/rules.d/000-diebold.role* com o seguinte conteúdo:
+```SUBSYSTEM=="usb", ATTRS{idVendor}=="03f4", ATTRS{idProduct}=="2006", GROUP="plugdev"```
+2. Incluir no rc.local o umbind do driver:
+```echo -n "3-3:1.0" > /sys/bus/usb/drivers/usblp/unbind```
+3. Incluir o usuário no grupo plugdev
+```sudo usermod -a -G plugdev <username>```
+4. Restart do udev
+```sudo service udev restart```
  
 ### Utilitários
 - Verificar logs   
