@@ -12,6 +12,8 @@ https://web.dev/usb/
 - https://developers.google.com/web/updates/2016/03/access-usb-devices-on-the-web
 - https://developers.google.com/web/fundamentals/native-hardware/build-for-webusb/
 - https://medium.com/@gendor/connecting-to-usb-devices-with-your-browser-d433a6df6f2
+- https://wiki.archlinux.org/index.php/udev
+
 
 
 ### Observações para execução em ambiente Linux
