@@ -13,7 +13,7 @@ https://web.dev/usb/
 - https://developers.google.com/web/fundamentals/native-hardware/build-for-webusb/
 - https://medium.com/@gendor/connecting-to-usb-devices-with-your-browser-d433a6df6f2
 - https://wiki.archlinux.org/index.php/udev
-
+- https://linuxconfig.org/tutorial-on-how-to-write-basic-udev-rules-in-linux
 
 
 ### Observações para execução em ambiente Linux
@@ -71,8 +71,8 @@ echo 'Driver unbounded'
 echo 'Finish!'
  ```
 
-**SOLUÇÃO DEFINITIVA**   
-https://linuxconfig.org/tutorial-on-how-to-write-basic-udev-rules-in-linux   
+### Impressora Diebold:  
+   
 1.Criar o script a seguir em /usr/local/bin/unbind_printer.sh:   
 ``` 
 #!/bin/bash
@@ -93,11 +93,17 @@ echo -n ${PORTID:0:3}:1.0 >  /sys/bus/usb/drivers/cdc_acm/unbind
  exit 0
 ```  
 
-### Passo-a-passo Impressora Diebold:
+### Impressora Diebold:
 1. Criar o arquivo */etc/udev/rules.d/00-diebold.rules* com o seguinte conteúdo:
 ```SUBSYSTEM=="usb", ATTRS{idVendor}=="03f4", ATTRS{idProduct}=="2006", MODE="0664", GROUP="plugdev", RUN+="/bin/sh -c 'echo -n $id:1.0 > /sys/bus/usb/drivers/usblp/unbind'"```
-2. Reload do udev
-```udevadm control --reload```
+2. Copiar shell script abaixo para */usr/local/bin/unbind_printer.sh*:
+```
+#!/bin/bash
+echo ' ' > /dev/usb/lp0 && echo ' ' > /dev/usb/lp0
+PORTID=$(grep -l '3f4/2006' /sys/bus/usb/devices/*/uevent | tail -1 | tr "/" " " | awk '{print $5}')
+echo -n ${PORTID:0:3}:1.0 >  /sys/bus/usb/drivers/usblp/unbind
+echo -n ${PORTID:0:3} >  /sys/bus/usb/drivers/usb/unbind
+```
 3. Incluir o usuário no grupo plugdev
 ```sudo usermod -a -G plugdev <username>```
 
