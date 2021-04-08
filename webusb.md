@@ -71,7 +71,7 @@ echo 'Driver unbounded'
 echo 'Finish!'
  ```
 
-### Impressora Diebold:  
+### Impressora Bematech:  
    
 1.Criar o script a seguir em /usr/local/bin/unbind_printer.sh:   
 ``` 
