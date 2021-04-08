@@ -94,7 +94,7 @@ echo -n ${PORTID:0:3}:1.0 >  /sys/bus/usb/drivers/cdc_acm/unbind
 ```  
 
 ### Passo-a-passo Impressora Diebold:
-1. Criar o arquivo */etc/udev/rules.d/000-diebold.role* com o seguinte conteúdo:
+1. Criar o arquivo */etc/udev/rules.d/00-diebold.rules* com o seguinte conteúdo:
 ```SUBSYSTEM=="usb", ATTRS{idVendor}=="03f4", ATTRS{idProduct}=="2006", MODE="0664", GROUP="plugdev", RUN+="/bin/sh -c 'echo -n $id:1.0 > /sys/bus/usb/drivers/usblp/unbind'"```
 2. Incluir o usuário no grupo plugdev
 ```sudo usermod -a -G plugdev <username>```
