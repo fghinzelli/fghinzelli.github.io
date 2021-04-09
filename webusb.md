@@ -74,8 +74,7 @@ echo 'Finish!'
 ### Impressora Bematech:  
   
 1. Criar o arquivo */etc/udev/rules.d/99-bematech.role* com o seguinte conteúdo:   
-```ACTION=="add", SUBSYSTEM=="usb", ATTRS{idVendor}=="0b1b", ATTRS{idProduct}=="0003", ATTR{bInterfaceNumber}=="00", GROUP="plugdev", RUN+="/usr/local/bin/unbind_printer.sh"
-```
+```ACTION=="add", SUBSYSTEM=="usb", ATTRS{idVendor}=="0b1b", ATTRS{idProduct}=="0003", ATTR{bInterfaceNumber}=="00", GROUP="plugdev", RUN+="/usr/local/bin/unbind_printer.sh"```
 2.Criar o script a seguir em /usr/local/bin/unbind_printer.sh:   
 ``` 
 #!/bin/bash
