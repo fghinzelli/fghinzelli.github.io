@@ -73,8 +73,10 @@ echo 'Finish!'
 
 ### Impressora Bematech:  
   
-1. Criar o arquivo */etc/udev/rules.d/999-bematech.rules* com o seguinte conteúdo:   
-```SUBSYSTEM=="usb", ATTRS{idVendor}=="0b1b", ATTRS{idProduct}=="0003", GROUP="plugdev", RUN+="/usr/local/bin/unbind_bematech.sh"```   
+1. Criar o arquivo */etc/udev/rules.d/00-bematech.rules* com o seguinte conteúdo:   
+```
+ACTION=="add", SUBSYSTEM=="usb", ATTRS{idVendor}=="0b1b", ATTRS{idProduct}=="0003", ATTR{bInterfaceNumber}=="00", GROUP="plugdev", RUN+="/usr/local/bin/unbind_bema.sh"
+```   
 2. Criar o script a seguir em /usr/local/bin/unbind_bematech.sh:   
 ``` 
 #!/bin/bash
@@ -82,12 +84,7 @@ echo ' ' > /dev/ttyACM0 && echo ' ' > /dev/ttyACM0
 PORTID=$(grep -l 'b1b/3' /sys/bus/usb/devices/*/uevent | tail -1 | tr "/" " " | awk '{print $5}')
 echo -n ${PORTID:0:3}:1.0 >  /sys/bus/usb/drivers/cdc_acm/unbind
 ```
-3. Incluir uma chamada para o script em /etc/rc.local:
-```
-/usr/local/bin/unbind_printer.sh &
-exit 0
-```
-4. Incluir o usuário no grupo plugdev
+3. Incluir o usuário no grupo plugdev
 ```sudo usermod -a -G plugdev <username>```
  
 
@@ -102,12 +99,7 @@ PORTID=$(grep -l '3f4/2006' /sys/bus/usb/devices/*/uevent | tail -1 | tr "/" " "
 echo -n ${PORTID:0:3}:1.0 >  /sys/bus/usb/drivers/usblp/unbind
 echo -n ${PORTID:0:3} >  /sys/bus/usb/drivers/usb/unbind
 ```
-3. Incluir uma chamada para o script em /etc/rc.local:
-```
-/usr/local/bin/unbind_printer.sh &
-exit 0
-```
-4. Incluir o usuário no grupo plugdev
+3. Incluir o usuário no grupo plugdev
 ```sudo usermod -a -G plugdev <username>```
 
  
