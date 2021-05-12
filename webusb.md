@@ -78,6 +78,10 @@ echo 'Finish!'
 ```
 SUBSYSTEM=="usb", ATTRS{idVendor}=="0b1b", ATTRS{idProduct}=="0003", MODE="0664", GROUP="plugdev"
 ACTION=="add", SUBSYSTEM=="usb", ATTRS{idVendor}=="0b1b", ATTRS{idProduct}=="0003", ATTR{bInterfaceNumber}=="00", MODE="0664", GROUP="plugdev", RUN+="/usr/local/bin/unbind_bematech.sh"
+
+# Também é possível utilizar um único arquivo:
+SUBSYSTEM=="usb", ATTRS{idVendor}=="0b1b", ATTRS{idProduct}=="0003", MODE="0664", GROUP="plugdev"
+ACTION=="add", SUBSYSTEM=="usb", ATTRS{idVendor}=="0b1b", ATTRS{idProduct}=="0003", ATTR{bInterfaceNumber}=="00", MODE="0664", GROUP="plugdev", RUN+="/bin/sh -c 'echo \' \' > /dev/ttyACM0 && echo \' \' > /dev/ttyACM0 && echo -n $id:1.0 > /sys/bus/usb/drivers/cdc_acm/unbind'"
 ```   
 2. Criar o script a seguir em /usr/local/bin/unbind_bematech.sh:   
 ``` 
@@ -93,7 +97,7 @@ echo -n ${PORTID:0:3}:1.0 >  /sys/bus/usb/drivers/cdc_acm/unbind
 ### Impressora Diebold:
 1. Criar o arquivo */etc/udev/rules.d/00-diebold.rules* com o seguinte conteúdo:
 ```SUBSYSTEM=="usb", ATTRS{idVendor}=="03f4", ATTRS{idProduct}=="2006", MODE="0664", GROUP="plugdev", RUN+="/bin/sh -c 'echo -n $id:1.0 > /sys/bus/usb/drivers/usblp/unbind'"```
-2. Copiar shell script abaixo para */usr/local/bin/unbind_printer.sh*:
+2. Copiar shell script abaixo para */usr/local/bin/unbind_diebold.sh* (Caso seja utilizado um arquivo para executar os comandos de umbind):
 ```
 #!/bin/bash
 echo ' ' > /dev/usb/lp0 && echo ' ' > /dev/usb/lp0
