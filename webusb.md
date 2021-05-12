@@ -76,7 +76,8 @@ echo 'Finish!'
   
 1. Criar o arquivo */etc/udev/rules.d/00-bematech.rules* com o seguinte conteúdo:   
 ```
-ACTION=="add", SUBSYSTEM=="usb", ATTRS{idVendor}=="0b1b", ATTRS{idProduct}=="0003", ATTR{bInterfaceNumber}=="00", GROUP="plugdev", RUN+="/usr/local/bin/unbind_bema.sh"
+SUBSYSTEM=="usb", ATTRS{idVendor}=="0b1b", ATTRS{idProduct}=="0003", MODE="0664", GROUP="plugdev"
+ACTION=="add", SUBSYSTEM=="usb", ATTRS{idVendor}=="0b1b", ATTRS{idProduct}=="0003", ATTR{bInterfaceNumber}=="00", MODE="0664", GROUP="plugdev", RUN+="/usr/local/bin/unbind_bematech.sh"
 ```   
 2. Criar o script a seguir em /usr/local/bin/unbind_bematech.sh:   
 ``` 
