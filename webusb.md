@@ -15,6 +15,7 @@ https://web.dev/usb/
 - https://wiki.archlinux.org/index.php/udev
 - https://linuxconfig.org/tutorial-on-how-to-write-basic-udev-rules-in-linux
 - https://unix.stackexchange.com/a/215725
+- https://linux.die.net/man/7/udev
 
 ### Observações para execução em ambiente Linux
 - Testar comunicação com a impressora:
