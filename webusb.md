@@ -16,6 +16,7 @@ https://web.dev/usb/
 - https://linuxconfig.org/tutorial-on-how-to-write-basic-udev-rules-in-linux
 - https://unix.stackexchange.com/a/215725
 - https://linux.die.net/man/7/udev
+- https://www.freedesktop.org/software/systemd/man/udevadm.html#-c1
 
 ### Observações para execução em ambiente Linux
 - Testar comunicação com a impressora:
@@ -122,4 +123,6 @@ echo -n ${PORTID:0:3} >  /sys/bus/usb/drivers/usb/unbind
 ``` udevadm control --reload ```
 - Restart udev   
 ```sudo service udev restart```
+- Actions:
+```Possible actions are "add", "remove", "change", "move", "online", "offline", "bind", and "unbind". Also, the special value "help" can be used to list the possible actions. The default value is "change". ```
 
