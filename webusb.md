@@ -126,3 +126,6 @@ echo -n ${PORTID:0:3} >  /sys/bus/usb/drivers/usb/unbind
 - Actions:
 ```Possible actions are "add", "remove", "change", "move", "online", "offline", "bind", and "unbind". Also, the special value "help" can be used to list the possible actions. The default value is "change". ```
 
+ ## Problemas conhecidos
+ - Após atualizar o arquivo .rules, configurações antigas ainda são executadas. O problema foi corrigido com a reinstalação do pacote udev:
+ ```sudo apt-get install --reinstall udev```
