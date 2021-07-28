@@ -50,6 +50,20 @@ exec &> logfile.txt
 - Copy public keys to server
 ``` ssh-copy-id -i ~/.ssh/id_rsa.pub username@servername ```
 
+## Create a new Item in the laucher menu
+```
+# create a new file in /usr/share/applications and save with this informations
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=<Sample Application Name>
+Comment=<A sample application>
+Exec=/opt/<application>
+Icon=<application.png>
+Terminal=false
+Categories=Application
+```
+
 ## VNC
 [https://www.server-world.info/en/note?os=Ubuntu_19.04&p=desktop&f=5](https://www.server-world.info/en/note?os=Ubuntu_19.04&p=desktop&f=5)
 [https://www.tecmint.com/install-and-configure-vnc-server-on-ubuntu/](https://www.tecmint.com/install-and-configure-vnc-server-on-ubuntu/)
