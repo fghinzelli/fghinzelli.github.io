@@ -77,3 +77,7 @@ ALTER USER username WITH NOSUPERUSER;
 * **CAST**
 
 ``` TO_CHAR(TO_TIMESTAMP(bigint_field / 1000), 'DD/MM/YYYY HH24:MI:SS')```
+
+* **Datestyle**
+Chage the file */var/lib/postgresql/data/postgres.conf*
+```datestyle = 'iso, dmy'```
