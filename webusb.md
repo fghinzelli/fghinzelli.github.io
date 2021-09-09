@@ -77,8 +77,8 @@ echo 'Finish!'
   
 1. Criar o arquivo */etc/udev/rules.d/00-bematech.rules* com o seguinte conteúdo:   
 ```
-SUBSYSTEM=="usb", ATTRS{idVendor}=="0b1b", ATTRS{idProduct}=="0003", MODE="0664", GROUP="plugdev"
-ACTION=="add", SUBSYSTEM=="usb", ATTRS{idVendor}=="0b1b", ATTRS{idProduct}=="0003", ATTR{bInterfaceNumber}=="00", MODE="0664", GROUP="plugdev", RUN+="/usr/local/bin/unbind_bematech.sh"
+ACTION=="add" SUBSYSTEM=="usb", ATTRS{idVendor}=="0b1b", ATTRS{idProduct}=="0003", MODE="0664", GROUP="plugdev"
+ACTION=="add" SUBSYSTEM=="usb", ATTRS{idVendor}=="0b1b", ATTRS{idProduct}=="0003", ATTR{bInterfaceNumber}=="00", MODE="0664", GROUP="plugdev", RUN+="/usr/local/bin/unbind_bematech.sh"
 
 # Também é possível utilizar um único arquivo:
 SUBSYSTEM=="usb", ATTRS{idVendor}=="0b1b", ATTRS{idProduct}=="0003", MODE="0664", GROUP="plugdev"
@@ -87,7 +87,20 @@ ACTION=="add", SUBSYSTEM=="usb", ATTRS{idVendor}=="0b1b", ATTRS{idProduct}=="000
 2. Criar o script a seguir em /usr/local/bin/unbind_bematech.sh:   
 ``` 
 #!/bin/bash
-echo ' ' > /dev/ttyACM0 && echo ' ' > /dev/ttyACM0
+
+# Se o arquivo existir, remova-o
+FILE=/dev/ttyACM0
+if [ -f "$FILE" ]; then
+    rm -rf $FILE
+fi
+# Aguardar a impressora carregar todas as configuracoes
+sleep 15
+echo '------------------------------------------' > /dev/ttyACM0 
+echo '          IMPRESSORA INICIALIZADA         ' > /dev/ttyACM0 
+echo '------------------------------------------' > /dev/ttyACM0 
+echo -e '\x1b\x64\x05' > /dev/ttyACM0 && echo -e '\x1b\x69' > /dev/ttyACM0
+
+# Unbind para permitir o controle da impressora pelo navegador
 PORTID=$(grep -l 'b1b/3' /sys/bus/usb/devices/*/uevent | tail -1 | tr "/" " " | awk '{print $5}')
 echo -n ${PORTID:0:3}:1.0 >  /sys/bus/usb/drivers/cdc_acm/unbind
 ```
