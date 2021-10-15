@@ -127,3 +127,24 @@ echo "zend_extension=<path_do_arquivo_xdebug>/xdebug.so" > /etc/php5/mods-availa
 Para geração/atualização dos arquivos de Internacionalização (/app/messages/pt-BR/):
 
 ``` php yii message-enum "@app/config/i18n.php" ``` 
+
+## Iframe problems
+Verificar se o controller possui, no método behaviors o parâmetro 'iframeble' setado
+```
+public function behaviors()
+    {
+        return [
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                    'delete' => ['POST'],
+                ],
+            ],
+            'iframeable' => [
+                'class' => IframeableBehavior::className(),
+            ]
+        ];
+    }
+```
+
+
