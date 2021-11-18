@@ -1,4 +1,7 @@
 # Server commands
+**Default path of repositories**
+```/var/lib/svn```
+
 **Create a new repository**
 ```svnadmin create <repository_name>```
 
