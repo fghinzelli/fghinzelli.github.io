@@ -26,6 +26,8 @@
 * **Backup / Restore**
 ```sql
   pg_dump -h <host> -d <database> -U <usuario> -v > <arquivo_backup.dmp>
+  # Only one schema
+  pg_dump -h <host> -d <database> -U <usuario> -n <schema_name> -v > <arquivo_backup.dmp>
   
   pg_restore -U <usuario> -d=<database_name> < <arquivo_backup.dmp>
   
