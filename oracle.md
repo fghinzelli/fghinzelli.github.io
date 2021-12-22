@@ -19,3 +19,10 @@ and r_constraint_name in
  )
 order by table_name, constraint_name
 ```
+## Update sequence index
+
+```
+ALTER SEQUENCE ADMRH.OPERADORES_SEQ INCREMENT BY 362;
+SELECT ADMRH.operadores_seq.NEXTVAL FROM dual
+ALTER SEQUENCE ADMRH.OPERADORES_SEQ INCREMENT BY 1;
+```
