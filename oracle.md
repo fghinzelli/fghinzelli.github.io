@@ -26,3 +26,13 @@ ALTER SEQUENCE ADMRH.OPERADORES_SEQ INCREMENT BY 362;
 SELECT ADMRH.operadores_seq.NEXTVAL FROM dual
 ALTER SEQUENCE ADMRH.OPERADORES_SEQ INCREMENT BY 1;
 ```
+
+## Get data of sequence
+
+```
+SELECT *
+  FROM all_sequences 
+  where 
+  sequence_owner = 'ADMRH' AND
+  sequence_name = 'OPERADORES_SEQ'
+```
