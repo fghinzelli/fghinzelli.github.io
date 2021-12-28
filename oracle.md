@@ -36,3 +36,7 @@ SELECT *
   sequence_owner = 'ADMRH' AND
   sequence_name = 'OPERADORES_SEQ'
 ```
+## Find columns of a table
+```
+select COLUMN_NAME from ALL_TAB_COLUMNS where TABLE_NAME='DEPENDENTES' AND OWNER = 'ADMRH' ORDER BY COLUMN_ID;
+```
