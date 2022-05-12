@@ -8,7 +8,8 @@
 ```/etc/init.d/postgresql-8.2 reload```
 * **Permissões de acesso**
 ```vim /var/lib/pgsql/pg_hba.conf```
-
+* **Consultar número de Conexoes simultâneas**
+```select * from pg_stat_activity;```
 
 
 ## Client commands
@@ -21,6 +22,8 @@
 * **Listar databases**
 ```sql
   \l
+  -- Selecionar database
+  \connect <database_name>
 ```
 
 * **Backup / Restore**
