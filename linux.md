@@ -1,5 +1,11 @@
 # Linux
 
+## grep commands
+``` 
+# List text without comments (#)
+grep -v '^#' file1 file2 file3 
+```
+
 ## Add a program to default path
 ```bash
 # Create a symbolic link in /usr/local/lib
