@@ -10,8 +10,8 @@
 	<import value="net.sf.jasperreports.engine.data.*"/>
 	<queryString>
 		<![CDATA[SELECT MATRICULA, NOME, ERRO, SYSDATE
-FROM PMCS.ESCALA_SAUDE_ERROS
-ORDER BY MATRICULA, NOME, TP_ERRO]]>
+			FROM PMCS.ESCALA_SAUDE_ERROS, NOVOCAMPO, SEGUNDOCAMPO
+			ORDER BY MATRICULA, NOME]]>
 	</queryString>
 	<field name="MATRICULA" class="java.lang.String"/>
 	<field name="NOME" class="java.lang.String"/>
@@ -157,7 +157,7 @@ ORDER BY MATRICULA, NOME, TP_ERRO]]>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font fontName="Arial" size="8" isBold="false" pdfFontName="Helvetica-Bold"/>
 				</textElement>
-				<text><![CDATA[Página]]></text>
+				<text><![CDATA[Página XXXXX]]></text>
 			</staticText>
 			<staticText>
 				<reportElement key="staticText-38" x="484" y="15" width="27" height="13" uuid="bbc2b89c-704a-4944-807a-2d6c6a376413"/>
