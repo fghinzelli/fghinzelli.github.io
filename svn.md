@@ -75,6 +75,16 @@ http://svnbook.red-bean.com/en/1.7/svn.branchmerge.basicmerging.html#svn.branche
 ```
 svn copy svn://<server>/<repository>/trunk svn://<server>/<repository>/branches/<new_branch>
 ```
+**Merge with trunk (To keep feature branch updated)**
+svn merge svn://<server>/<repository>/branches/<branch_name> svn://<server>/<repository>/trunk
+
+**Integration with trunk (To publish the feature branch on production branch)**
+# Go to trunk workin copy
+svn checkout svn://<server>/<repository>/trunk
+# Update the working copy
+svn update
+# Get changes from your feature branch
+svn merge svn://<server>/<repository>/trunk svn://<server>/<repository>/branches/<branch_name>
 
 # Configurations
 To change the default editor for subversion, access the file ```~/.subversion/config``` in the section **[helpers]** and set the property **editor-cmd**:
