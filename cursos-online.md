@@ -7,3 +7,7 @@
 - https://www.ev.org.br/areas-de-interesse
  	
 - https://educacao-executiva.fgv.br/cursos/online/curta-media-duracao?geo-popup=hide&gclid=Cj0KCQjwub-HBhCyARIsAPctr7wMUFcLCzFM_nJNdRnQsxPizdS2PctGeNLMIES-InfO6yM_QOZZvOMaAj_VEALw_wcB
+
+- https://codante.io/
+
+- https://www.classcentral.com/
