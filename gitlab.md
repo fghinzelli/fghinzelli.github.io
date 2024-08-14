@@ -16,4 +16,5 @@ sudo gitlab-ctl tail gitlab-rails
 
 # Drill down to an individual file
 sudo gitlab-ctl tail nginx/gitlab_error.log
+sudo gitlab-rails/application_json.log
 ```
