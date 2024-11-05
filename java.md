@@ -52,3 +52,48 @@ double varDouble = 1.2323;
 == != < > <= >= 
 ```
 
+#### Estruturas condicionais (IF, SWITCH)
+
+```java
+if (a > b) {
+  // DO Something
+} else if (b > c) {
+  // DO Something
+} else {
+  // DO Something
+}
+
+switch (a) {
+  case 1:
+    // Do something
+    break;
+  case 2:
+    // Do something
+    break;
+  default:
+    break;
+}
+```
+
+#### Estruturas de repetição (FOR, WHILE, DO WHILE)
+
+```java
+/* FOR */
+for (int i=0; i<10; i++) {
+  System.out.println(i);
+}
+
+/* DO WHILE */
+int i = 0;
+do {
+    System.out.println(i);
+    i++;
+} while(i < 10);
+
+/* WHILE */
+int i = 0;
+while(i < 10) {
+    System.out.println(i);
+    i++;
+} 
+```
