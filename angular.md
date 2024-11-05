@@ -109,4 +109,52 @@ export class AppRoutingModule {}
 export class AppModule {}
 ```
 
+#### Services and subscriptions
+import { Injectable } from "@angular/core";
+import { Subject } from "rxjs";
+
+@Injectable({
+    providedIn: 'root'
+})
+export class PersonsService {
+    personsChanged = new Subject<string[]>();
+    persons: string[] = ['Antônio', 'Maria', 'João'];
+
+    addPerson(name: string) {
+        this.persons.push(name);
+        this.personsChanged.next(this.persons)
+    }
+
+    removePerson(name: string) {
+        this.persons = this.persons.filter(person => person !== name)
+        this.personsChanged.next(this.persons)
+    }
+}
+
+/* Para utilizar o service, no componente de destino, deve-se utilizar a injeção de dependências 
+   A class Subscription é utilizada para que as alterações tenham reflexo na listagem
+*/
+export class PersonsComponent implements OnInit, OnDestroy {
+    
+    personList: string[] = [];
+    private personsListSubs: Subscription | undefined;
+
+    constructor(private prsService: PersonsService) {}
+    ngOnInit(): void {
+        this.personList = this.prsService.persons
+        this.personsListSubs = this.prsService.personsChanged.subscribe(persons => {
+            this.personList = persons
+        })
+    }
+    ngOnDestroy(): void {
+        if (this.personsListSubs) {
+            this.personsListSubs.unsubscribe()
+        }
+    }
+    onRemovePerson(person: string) {
+        this.prsService.removePerson(person)
+    }
+ }
+   
+```
 
