@@ -112,11 +112,33 @@ public class Carro {
   private String marca;
   private String modelo;
 
+  public String getMarca() {
+        return marca;
+  }
+  public void setMarca(String marca) {
+      this.marca = marca;
+  }
+  public String getModelo() {
+      return modelo;
+  }
+  public void setModelo(String modelo) {
+      this.modelo = modelo;
+  }
+
+  // Metodo com retorno
+  public String exibirMarcaModelo() {
+      return this.marca + " " + this.modelo;
+  }
+
   
 }
 
 /* Instância do objeto */
 
-Carro meuCarro = new Carro();
+Carro carro = new Carro();
+carro.setMarca("VW");
+carro.setModelo("Gol");
+System.out.println(carro.exibirMarcaModelo());
+
 
 ```
