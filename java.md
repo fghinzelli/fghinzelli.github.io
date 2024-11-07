@@ -103,3 +103,20 @@ while(i < 10) {
     i++;
 } 
 ```
+
+#### Definição de classes, instancia de objetos
+
+```java
+/* Declaração da classe */
+public class Carro {
+  private String marca;
+  private String modelo;
+
+  
+}
+
+/* Instância do objeto */
+
+Carro meuCarro = new Carro();
+
+```
