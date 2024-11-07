@@ -83,6 +83,12 @@ for (int i=0; i<10; i++) {
   System.out.println(i);
 }
 
+/* FOR EACH */
+int[] arrSample = {1, 2, 3};
+for (int i :  arrSample) {
+  System.out.println(i);
+}
+
 /* DO WHILE */
 int i = 0;
 do {
