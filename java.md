@@ -140,5 +140,7 @@ carro.setMarca("VW");
 carro.setModelo("Gol");
 System.out.println(carro.exibirMarcaModelo());
 
+// Herança
+// Poliformismo
 
 ```
