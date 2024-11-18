@@ -140,7 +140,23 @@ carro.setMarca("VW");
 carro.setModelo("Gol");
 System.out.println(carro.exibirMarcaModelo());
 
+/* Relacionamento TEM UM */
+
+Pessoa pessoa = new Pessoa();
+Endereco endereco1 = new Endereco();
+// Pessoa "tem um" endereço
+pessoa.endereco = endereco1;
+
+
 // Herança
-// Poliformismo
+// Aluno "É" uma Pessoa
+
+class Aluno extends Pessoa {
+  super();
+}
 
 ```
+
+
+// Poliformismo
+
