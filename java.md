@@ -217,6 +217,27 @@ public final class Pessoa {
 public class Constantes {
   public static final URL_SITE = "https://meusite.com";
 }
+
+/* Interfaces */
+// Uma interface nada mais é do que uma classe abstrata com todos os métodos abstratos.
+// É uma espepécie de contrato a ser implementado pelas classes filhas.
+// No Java não existe herança múltipla, logo uma interface pode ser usada para um classe filha implementar
+// métodos de uma outra classe abstrata (interface)
+
+public interface AnimalDomestico {
+  void levarNoVeterinario() {}
+}
+
+public interface Felino {
+  void apararUnhas() {}
+}
+
+public class Mamifero {
+  public void mamar()
+}
+
+public class Gato extends Mamifero implements Felino, AnimalDomestico { 
+}
 ```
 
 
