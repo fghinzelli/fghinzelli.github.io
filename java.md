@@ -148,7 +148,7 @@ Endereco endereco1 = new Endereco();
 pessoa.endereco = endereco1;
 
 
-// Herança
+/* Herança */
 // Aluno "É" uma Pessoa
 
 class Aluno extends Pessoa {
@@ -158,8 +158,67 @@ class Aluno extends Pessoa {
   }
 }
 
+
+/* Modificadores de acesso */
+// Publico (Todo mundo)
+public String todoMundoVe;
+// Private (Somente dentro da classe)
+private String somenteDentroDaClasse;
+// Default (Somente dentro do mesmo pacote)
+String somenteDentroDoPacote;
+// Protected (Qualquer classe filha)
+protected String somenteSeFilha;
+
+/* Poliformismo de Sobreescrita (Classes filhas implementam uma nova versão do método) - Em tempo de execução */
+
+class Pessoa {
+  // ...
+  public exibirNome() {
+    System.out.println(this.nome)
+  }
+}
+
+class Aluno {
+  // ...
+  public exibirNome() {
+    System.out.println(this.nome + this.sobrenome)
+  }
+}
+
+/* Poliformismo de Sobrecarga (Mesmo método com assinatura diferente) */
+
+class Aluno {
+  // ...
+  public calcularMedia(double nota1, double nota2) {
+    System.out.println((nota1 + nota2) / 2);
+  }
+
+  public calcularMedia(double nota1, double nota2, double nota3) {
+    System.out.println((nota1 + nota2 + nota3) / 3);
+  }
+}
+
+/* Classes e metodos abstratos */
+// Classes abstratas não podem ser instanciadas
+// Métodos abstratos da classe pai são obrigatórios nos filhos
+
+public abstract class Pessoa {
+  public abstract void mostrarEndereco();
+}
+
+// Classes e atributos imutáveis (final)
+
+// A classe não pode ser herdada
+public final class Pessoa {
+}
+
+// Atributos imutaveis geralmente são usados para constantes
+
+public class Constantes {
+  public static final URL_SITE = "https://meusite.com";
+}
 ```
 
 
-// Poliformismo
+
 
