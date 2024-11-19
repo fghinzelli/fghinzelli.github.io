@@ -152,7 +152,10 @@ pessoa.endereco = endereco1;
 // Aluno "É" uma Pessoa
 
 class Aluno extends Pessoa {
-  super();
+  public Aluno() {
+    // super executa métodos da classe pai
+    super();
+  }
 }
 
 ```
