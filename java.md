@@ -206,7 +206,7 @@ public abstract class Pessoa {
   public abstract void mostrarEndereco();
 }
 
-// Classes e atributos imutáveis (final)
+/* Classes e atributos imutáveis (final) */
 
 // A classe não pode ser herdada
 public final class Pessoa {
