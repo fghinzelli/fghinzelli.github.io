@@ -274,6 +274,16 @@ public double lerNumero throws Exception () {
   return scan.nextDouble();
 }
 
+// Também é possível lançar uma nova exceção em qualquer parte do código
+
+public double lerNumero () {
+  Scanner scan = new Scanner(System.in);
+  if (true) { // Uma condição qualquer
+    throws new Exception("Ocorreu um erro");
+  }
+  return scan.nextDouble();
+}
+
 // Na chamada deste método, é obrigatório incluí-lo em um bloco Try Catch
 
 try {
