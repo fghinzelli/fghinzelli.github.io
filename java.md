@@ -238,6 +238,49 @@ public class Mamifero {
 
 public class Gato extends Mamifero implements Felino, AnimalDomestico { 
 }
+
+/* Tratamento de exceções */
+
+try {
+  int[] vetorTeste = new int[4];
+  vetorTeste[4] = 1;
+  vetorTeste[3] = 0;
+  vetorTeste=[1] = 10 / vetorTeste[3];
+} catch (ArrayIndexOutOfBoundsException exception) {
+  Sytem.out.println("Exceção ao acessar índice que não existe");
+} catch (ArithmeticlException exception) {
+  System.out.println("Exceção ao executar cálculo");
+} finally {
+  System.out.println("Sempre executada após passar pelo try e catch");
+}
+
+
+// É possível agrupar as exceptions em um único catch
+
+try {
+  int[] vetorTeste = new int[4];
+  vetorTeste[4] = 1;
+  vetorTeste[3] = 0;
+  vetorTeste=[1] = 10 / vetorTeste[3];
+} catch (ArrayIndexOutOfBoundsException | Exception exception) {
+  Sytem.out.println("Ocorreu um erro");
+}
+
+
+// Para "repassar a responsabilidade" do tratamento do erro
+
+public double lerNumero throws Exception () {
+  Scanner scan = new Scanner(System.in);
+  return scan.nextDouble();
+}
+
+// Na chamada deste método, é obrigatório incluí-lo em um bloco Try Catch
+
+try {
+  double teste = lerNumero();
+catch (Exception e) {
+  System.out.println("Erro ao ler o número");
+}
 ```
 
 
