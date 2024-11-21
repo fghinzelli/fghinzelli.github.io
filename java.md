@@ -2,7 +2,17 @@
 
 - Instalar o complemento Server Connector
 - Baixar o MAVEN, extrair os arquivos e adicionar o caminho para o diretóri /bin ao PATH
-- Baixar a versão do JBOSS e extrair para um diretório do sistema a ser apontado posteriormente
+```bash
+wget https://dlcdn.apache.org/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.tar.gz
+tar -zxvf apache-maven-3.9.9-bin.tar.gz
+sudo mv apache-maven-3.9.9 /opt/maven
+```
+- Baixar a versão do JBOSS/Wildfly e extrair para um diretório do sistema a ser apontado posteriormente
+```bash
+wget https://download.jboss.org/wildfly/11.0.0.Final/wildfly-11.0.0.Final.tar.gz
+tar -zxvf wildfly-11.0.0.Final.tar.gz
+mv wildfly-11.0.0.Final ~
+```
 - Criar um novo server apontando para o diretório do JBOSS
 - Executar o build da aplicação com o comando `mvn clean package`
 - Clicar com o botão direito sobre o server criado e selecionar "Publish server (full)"
