@@ -1,22 +1,17 @@
 ### Configuração de projeto com JBOSS no VS Code
 
-- Instalar o complemento Server Connector
-- Baixar o MAVEN, extrair os arquivos e adicionar o caminho para o diretóri /bin ao PATH
-```bash
-wget https://dlcdn.apache.org/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.tar.gz
-tar -zxvf apache-maven-3.9.9-bin.tar.gz
-sudo mv apache-maven-3.9.9 /opt/maven
-```
-- Baixar a versão do JBOSS/Wildfly e extrair para um diretório do sistema a ser apontado posteriormente
-```bash
-wget https://download.jboss.org/wildfly/11.0.0.Final/wildfly-11.0.0.Final.tar.gz
-tar -zxvf wildfly-11.0.0.Final.tar.gz
-mv wildfly-11.0.0.Final ~
-```
-- Criar um novo server apontando para o diretório do JBOSS
-- Executar o build da aplicação com o comando `mvn clean package`
-- Clicar com o botão direito sobre o server criado e selecionar "Publish server (full)"
-- Inicializar o servidor.
+- Instalar os plugins necessários:
+  - Java Extension Pack
+  - Maven for Java
+  - JBoss Toolkit
+- Baixar uma versão do WildFly (Desnecessário caso for feito o download ao criar o novo servidor)
+- Na aba Servers (No ícone de explorer) do VSCode, clicar em "Create New Server". Informar se deve ser feito o download do WildFly ou se ele já se encontra em algum diretório (Neste caso, informar o caminho). 
+- Caso necessário, editar as opções do servidor, clicando com o botão direito e selecionando Edit Server.Para configurar a versão do Java incluir a propriedade *vm.install.path*. Também pode ser necessário incluir o parâmetro "rsp-ui.rsp.java.home": "/usr/lib/jvm/java-11-openjdk-amd64", indicando o caminho do java
+- Para testar se o Wildfly está funcionando, clicar com o botão direito sobre o server criado e selecionar *Start server*
+- Utilizar o Maven para gerar o arquivo .war. Isso pode ser feito com o plugin Maven for java (Aba abaixo de servers) ou via linha de comando:  
+```mvn clean package```
+- Será gerada uma nova pasta *target* com um arquivo .war. Clicar com o botão direito sobre o arquivo e selecionar *Run on server* e escolher o Server Wildfly criado anteriormente.
+- Para acessar a aplicação, a url será composta por: localhost:8080/<artifactId>/<caminho_definido_no_arquivo_web.xml>/<rotas_da_aplicacao>
 
 ### Sintaxe
 
