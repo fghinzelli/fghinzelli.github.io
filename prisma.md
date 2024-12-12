@@ -11,3 +11,32 @@ npm install prisma
 npx prisma init
 ```
 ## Create models
+
+```javascript
+model User {
+  id Int @id @default(autoincrement())
+  name String
+  username String @unique
+  avatar String
+  Post Post[]
+}
+
+model Post {
+  id Int @id @default(autoincrement())
+  cover String
+  title String
+  slug String @unique
+  body String
+  markdown String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  authorId Int
+  author User @relation(fields: [authorId], references: [id])
+}
+```
+
+## Generate migrations
+Before, edit file .env with the user/password of the database
+```bash
+npx prisma migrate dev --name init
+```
