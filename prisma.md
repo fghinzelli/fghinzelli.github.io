@@ -40,3 +40,9 @@ Before, edit file .env with the user/password of the database
 ```bash
 npx prisma migrate dev --name init
 ```
+
+## Generate client
+It's necessary to generate the client every time the database is changed
+```bash
+npx prisma generate
+```
