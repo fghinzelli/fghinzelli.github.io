@@ -1,4 +1,6 @@
-## Prisma
+## Prisma 
+[Docs](https://www.prisma.io/docs/getting-started)
+
 Prisma is a Javascript ORM to create and management databases on node applications.]
 
 ## Installation
