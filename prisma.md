@@ -48,3 +48,56 @@ It's necessary to generate the client every time the database is changed
 ```bash
 npx prisma generate
 ```
+
+## Seed
+Create a new file seed.js like this:
+
+```javascript
+const { PrismaClient } = require("@prisma/client");
+const prisma = new PrismaClient();
+
+async function main() {
+  const author = {
+    name: "Ana Beatriz",
+    username: "anabeatriz_dev",
+    avatar:
+      "https://raw.githubusercontent.com/viniciosneves/code-connect-assets/main/authors/anabeatriz_dev.png",
+  };
+  const ana = await prisma.user.upsert({
+    where: { username: author.username },
+    update: {},
+    create: author,
+  });
+
+  const posts = [
+  ];
+  posts.forEach(async (post) => {
+    await prisma.post.upsert({
+        where: { slug: post.slug },
+        update: {},
+        create: post,
+      });
+  })
+
+  console.log('Author created', ana)
+}
+main()
+  .then(async () => {
+    await prisma.$disconnect();
+  })
+  .catch(async (e) => {
+    console.error(e);
+    await prisma.$disconnect();
+    process.exit(1);
+  });
+```
+Then add a new command to package.json:
+
+```javascript
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  },
+  "dependencies": {
+```
+To execute, run ```npm run prisma seed```
