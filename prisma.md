@@ -100,4 +100,4 @@ Then add a new command to package.json:
   },
   "dependencies": {
 ```
-To execute, run ```npm run prisma seed```
+To execute, run ```npx prisma db seed```
