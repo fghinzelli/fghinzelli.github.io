@@ -70,6 +70,12 @@ Terminal=false
 Categories=Application
 ```
 
+## CentOS on Docker - Executar yum update
+```
+sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*
+sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
+```
+
 ## VNC
 [https://www.server-world.info/en/note?os=Ubuntu_19.04&p=desktop&f=5](https://www.server-world.info/en/note?os=Ubuntu_19.04&p=desktop&f=5)
 [https://www.tecmint.com/install-and-configure-vnc-server-on-ubuntu/](https://www.tecmint.com/install-and-configure-vnc-server-on-ubuntu/)
