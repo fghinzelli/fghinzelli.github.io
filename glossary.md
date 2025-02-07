@@ -14,3 +14,6 @@
 * **REST** - [Representational State Transfer](https://pt.wikipedia.org/wiki/REST)
 * **Gold platting** - Practice in which features not requested by the user are arbitrarily added to the project
 * **EAV** - [Entity Attributte Value](https://en.wikipedia.org/wiki/Entity%E2%80%93attribute%E2%80%93value_model)
+* [**Project Organization**](https://medium.com/sahibinden-technology/package-by-layer-vs-package-by-feature-7e89cde2ae3a)
+* * **Packege by Feature** - Resources agrupped by Feature (Ex.: Package Post with files PostModel, PostController and PostView)
+  * **Packege by Layer** - Resources agrruped By Type/Layer (Ex.: Package Model with files PostModel, CommentModel, UserModel, etc.) 
