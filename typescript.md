@@ -2,5 +2,14 @@
 
 A "superset" to Javascript.
 
-## Objective
+#### Objectives
 - Reduce errors
+
+#### Instalation
+```
+npm install typescript
+```
+#### Run 
+```
+npx tsc
+```
