@@ -5,6 +5,7 @@
 #### 📈 Definitions
 - Reduce development errors
 - TS doesn't run in the browser, it needs to be compiled. After compilation, it will generate a JavaScript file
+- Whenever possible, use type inference (It's not necessary to declare the type)
 
 #### 💥 Instalation
 ```shell
