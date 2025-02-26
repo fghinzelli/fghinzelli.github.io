@@ -1,10 +1,10 @@
 # Typescript
 
-🤩 A "superset" to Javascript. 
+🤩 A "superset" of JavaScript. 
 
 #### 📈 Definitions
-- Reduce errors on development
-- TS dont runs on browser, its needs to be compiled
+- Reduce development errors
+- TS doesn't run in the browser, it needs to be compiled. After compilation, it will generate a JavaScript file
 
 #### 💥 Instalation
 ```shell
@@ -18,6 +18,31 @@ npx tsc <file_name.ts>
 ```
 #### 📓 Sintax
 ##### Primitive types
-- *number*
-- *string*
-- *boolean*
+```typescript
+let myNumber: number;
+let myString: string;
+let myBoolean: boolean;
+```
+##### More complex types
+```typescript
+/* Array */
+let myArray: number[];
+myArray = [1, 2, 3, 4];
+
+/* Object */
+let person: {
+  name: string,
+  age: number
+}
+person = {
+  name: 'John',
+  age: 12
+}
+/* Object with array */
+let people: {
+  name: string
+  age: number
+}[];
+
+
+```
