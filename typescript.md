@@ -1,18 +1,18 @@
 # Typescript
 
-A "superset" to Javascript.
+🤩 A "superset" to Javascript. 
 
-#### Definitions
+#### 📈 Definitions
 - Reduce errors on development
 - TS dont runs on browser, its needs to be compiled
 
-#### Instalation
+#### 💥 Instalation
 ```shell
 npm install typescript
 # Create a tscofig.json file
 npx tsc --init
 ```
-#### Run 
+#### 🚀 Run 
 ```
 npx tsc <file_name.ts>
 ```
