@@ -49,9 +49,16 @@ let people: {
 ##### 3. Type inference
 If a variable is instatiated without a type definition, typescript will infer the type and generate an error if something doesn't respect the type after the instantiation.
 ```typescript
-/* Array */
 let name = 'John Snow';
-// This will generate an error
+// This will generate an error, because name should be a string
 name = 124;
-
 ```
+
+##### 4. Union types
+```typescript
+let varStringOrNull: string | null = 'John Snow';
+// This will not generate an error
+name = null;
+```
+
+
