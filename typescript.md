@@ -16,3 +16,8 @@ npx tsc --init
 ```
 npx tsc <file_name.ts>
 ```
+#### 📓 Sintax
+##### Primitive types
+- *number*
+- *string*
+- *boolean*
