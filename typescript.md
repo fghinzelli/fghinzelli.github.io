@@ -124,6 +124,7 @@ student.listCourses();
 ```
 
 ##### 9️⃣ Interfaces
+```typescript
 interface Human {
   firstName: string,
   age: number
@@ -149,5 +150,5 @@ class Person implements Human {
     console.log("Hello!")
   }
 }
-
+```
 
