@@ -1,9 +1,17 @@
 ### Angular CLI ###
-#### Instalação 
-```npm install -g @angular/cli@<version>```
-#### Novo projeto 
-```ng new <new-project>```
+#### Common commands
+```shell
+# CLI installation
+npm install -g @angular/cli@<version>
 
+# New Angular project
+ng new <new-project>
+
+# New component
+ng g c <name>
+```
+
+### Components
 #### Sintaxe básica de módulo
 
 ```javascript
