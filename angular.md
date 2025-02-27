@@ -82,6 +82,7 @@ export class AppComponent {
 <app-pessoa (atualizarNome)="onAtualizarNome($event)" />
 ```
 #### Databinding
+Todas as variáveis existentes na classe do Componente (arquivo .ts) automaticamente estarão disponíveis no arquivo .html
 ```javascript
 /* One way databinding */
 <app-pessoa [value]="variavelComValor" (click)="umaFuncao" />
