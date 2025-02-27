@@ -1,6 +1,3 @@
-# fghinzelli.github.io
-This is a repository of files with anotations that help me to remember several concepts.
-
 ## Frontend 
 <a href="https://fghinzelli.github.io/angular"><img alt="Angular" src="https://img.shields.io/badge/-Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" /></a>
 <a href="https://fghinzelli.github.io/typescript"><img alt="Typescript" src="https://img.shields.io/badge/Typescript-3178c6?style=for-the-badge&logo=typescript&logoColor=white" /></a>
