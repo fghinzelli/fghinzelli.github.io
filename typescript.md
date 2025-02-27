@@ -81,6 +81,7 @@ function add(a: number, b:number): number {
 ```
 
 ##### 7️⃣ Generics
+```typescript
 function prepend<T>(theList: T, item: T) {
   return [item, ...theList];
 }
@@ -88,8 +89,10 @@ function prepend<T>(theList: T, item: T) {
 let newNumberList = prepend([2, 3, 4, 5], 1);
 // New string list
 let newStringList = prepend(['b', 'c', 'd'], 'a');
+```
 
 ##### 8️⃣ Classes
+```typescript
 class Student {
   
   // firstName: string
@@ -114,6 +117,7 @@ class Student {
     return this.courses.slice();
   }
 }
+```
 
 ##### 9️⃣ Interfaces
 
