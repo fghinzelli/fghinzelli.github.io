@@ -19,13 +19,13 @@ npx tsc --init
 npx tsc <file_name.ts>
 ```
 #### 📓 Sintax
-##### 1. Primitive types
+##### 1️⃣ Primitive types 
 ```typescript
 let myNumber: number;
 let myString: string;
 let myBoolean: boolean;
 ```
-##### 2. More complex types
+##### 2️⃣ More complex types
 ```typescript
 /* Array */
 let myArray: number[];
@@ -46,8 +46,9 @@ let people: {
   name: string
   age: number
 }[];
+```
 
-##### 3. Type inference
+##### 3️⃣ Type inference
 If a variable is instatiated without a type definition, typescript will infer the type and generate an error if something doesn't respect the type after the instantiation.
 ```typescript
 let name = 'John Snow';
@@ -55,14 +56,14 @@ let name = 'John Snow';
 name = 124;
 ```
 
-##### 4. Union types
+##### 4️⃣ Union types
 ```typescript
 let varStringOrNull: string | null = 'John Snow';
 // This will not generate an error
 name = null;
 ```
 
-##### 5. Type Aliases
+##### 5️⃣ Type Aliases
 ```typescript
 type Person = {
   name: string,
@@ -71,7 +72,7 @@ type Person = {
 let firstPerson: Person
 ```
 
-##### 6. Function types
+##### 6️⃣ Function types
 ```typescript
 // Declaring the type is not necessary because it's inferred
 function add(a: number, b:number): number {
@@ -79,9 +80,42 @@ function add(a: number, b:number): number {
 }
 ```
 
-##### 7. Generics
-##### 8. Classes
-##### 9. Interfaces
+##### 7️⃣ Generics
+function prepend<T>(theList: T, item: T) {
+  return [item, ...theList];
+}
+// New number list
+let newNumberList = prepend([2, 3, 4, 5], 1);
+// New string list
+let newStringList = prepend(['b', 'c', 'd'], 'a');
+
+##### 8️⃣ Classes
+class Student {
+  
+  // firstName: string
+  // lastName: string
+  // age: number
+  // private courses: string[]
+
+  // with this method, its not necessary declare the attributes
+  constructor(
+    public firstName: string, 
+    public lastName: string, 
+    public age: number,
+    private courses: string[]
+  )
+
+  // methods
+  enrol(courseName: string) {
+    this.courses.push(courseName);
+  }
+
+  listCourses() {
+    return this.courses.slice();
+  }
+}
+
+##### 9️⃣ Interfaces
 
 
 
