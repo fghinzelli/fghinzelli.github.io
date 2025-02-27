@@ -117,9 +117,37 @@ class Student {
     return this.courses.slice();
   }
 }
+
+const student = new Student("John", "Snow", 25, ["Angular"]);
+student.enrol("Typescript");
+student.listCourses();
 ```
 
 ##### 9️⃣ Interfaces
+interface Human {
+  firstName: string,
+  age: number
+  greet: () => void;
+}
 
+// To define a object structure
+let oneHuman: Human;
+
+oneHuman = {
+  name: "John",
+  age: 34,
+  greet() {
+    console.log("Hi!")
+  }
+}
+
+// To be implemented by a class
+class Person implements Human {
+  firstName: "Maria"
+  age: 35,
+  greet() {
+    console.log("Hello!")
+  }
+}
 
 
