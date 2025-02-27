@@ -6,6 +6,7 @@
 - Reduce development errors
 - TS doesn't run in the browser, it needs to be compiled. After compilation, it will generate a JavaScript file
 - Whenever possible, use type inference (It's not necessary to declare the type)
+- Define **types** reduce code duplication
 
 #### 💥 Instalation
 ```shell
@@ -60,5 +61,27 @@ let varStringOrNull: string | null = 'John Snow';
 // This will not generate an error
 name = null;
 ```
+
+##### 5. Type Aliases
+```typescript
+type Person = {
+  name: string,
+  age: number
+}
+let firstPerson: Person
+```
+
+##### 6. Function types
+```typescript
+// Declaring the type is not necessary because it's inferred
+function add(a: number, b:number): number {
+  return a + b;
+}
+```
+
+##### 7. Generics
+##### 8. Classes
+##### 9. Interfaces
+
 
 
