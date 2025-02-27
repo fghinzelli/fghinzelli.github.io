@@ -110,6 +110,7 @@ export class AppModule {}
 ```
 
 #### Services and subscriptions
+```javascript
 import { Injectable } from "@angular/core";
 import { Subject } from "rxjs";
 
