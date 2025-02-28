@@ -3,6 +3,8 @@
 <a href="https://fghinzelli.github.io/typescript"><img alt="Typescript" src="https://img.shields.io/badge/Typescript-3178c6?style=for-the-badge&logo=typescript&logoColor=white" /></a>
 <a href="https://fghinzelli.github.io/sass"><img alt="Typescript" src="https://img.shields.io/badge/Sass-c66394?style=for-the-badge&logo=sass&logoColor=white" /></a>
 
+[Articles](https://fghinzelli.github.io/frontend-articles)
+
 ## Backend
 <a href="https://fghinzelli.github.io/java"><img alt="Java" src="https://img.shields.io/badge/-Java-F05032?style=for-the-badge&logo=java&logoColor=white" /></a><br>
 
