@@ -84,6 +84,12 @@ export class AppComponent {
 #### Databinding
 Todas as variáveis existentes na classe do Componente (arquivo .ts) automaticamente estarão disponíveis no arquivo .html
 ```javascript
+/* String interpolation */
+<p>{{ person.name }}</p>
+
+/* Property binding */
+<img [src]="'assets/images/' + person.avatar" [alt]="person.name" />
+
 /* One way databinding */
 <app-pessoa [value]="variavelComValor" (click)="umaFuncao" />
 /* Two way data binding
