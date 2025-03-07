@@ -225,3 +225,11 @@ export class UserComponent {
 </div>
 ```
 
+#### Diretivas
+- ***ngFor**
+```html
+<li *ngFor="let user of users">{{user.name}}</li>
+
+```
+
+
