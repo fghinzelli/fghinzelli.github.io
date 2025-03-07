@@ -54,6 +54,9 @@ export class PessoaComponent {
 }
 /* Utilização do componente */
 <app-pessoa [nomePessoa]="variavelNoComponentePai" />
+
+// Para definir o parâmetro como obrigatório
+@Input({required: true}) name!: string;
 ```
 
 #### Chamada de um método do componente pai no componente filho
